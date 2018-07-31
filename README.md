@@ -1,2 +1,3 @@
 # Projects
-C++, C# and C projecst
+C++, C# and C projects
+
