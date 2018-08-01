@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1533135997 source:c:\users\belma\desktop\binary heap\main.cpp
+	<iostream>
+	<stdexcept>
+
