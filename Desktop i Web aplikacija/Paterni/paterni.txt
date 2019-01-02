@@ -1,0 +1,17 @@
+Observer patern- imamo kod prikaza izvještaja agencije, gdje se može odabrati putovanje da prikaže sve informacije o tom putovanju,
+jedna od informacija je broj putnika koji su trenutno registrovani za putovanje. Broj putnika se mijenja automatski kad 
+putnik rezervise putovanje.
+Observer pattern se koristi ukoliko postoje jedna-na-više veze izmedu objekata takve
+da ako se jedan objekat modifikuje, ostali ce biti obavješteni automatski. 
+Observer koristi tri actor klase: subjekat, observer i objekat. 
+Observer nadzire subjekat i svaki put kad se on promijeni obavještavaju se objekti.
+
+Interpreter patern- kod Logina za šifru treba imati brojeve, velika i mala slova i neki znak.
+Interpreter pattern služi za opis gramatike nekog jezika i jezickih izraza.
+Implementira se AbstractExpression interface koji koristi kompozitni pattern da bi 
+riješio neki jezicki problem. Obicno se koriste TerminalExpression i CompoundExpression 
+klase koje služe za rekurzivno rješavanje problema interpretacije nekog jezickog izraza 
+gdje je CompoundExpression neki dio pravila koji poziva drugo pravilo za obradu izraza,
+dok je TerminalExpression bazni slucaj za neko pravilo.
+
+Abstract factory patern- Možemo implementirati kod klase Korisnik jer imamo dvije vrste korisnika: obicni i online.

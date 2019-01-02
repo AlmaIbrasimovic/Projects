@@ -1,0 +1,106 @@
+﻿@model TravelBookAspNetMVCAzure.Models.AgencijaAzure
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AgencijaAzure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.createdAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createdAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.updatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.updatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.version)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.version)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idKartica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idKartica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.grad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.grad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lokacija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lokacija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sifra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

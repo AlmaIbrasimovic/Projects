@@ -1,0 +1,17 @@
+1) Singleton patern (kreacijski patern)
+Uloga Singleton paterna je da osigura da se klasa  moze instancirati samo jednom i da joj se osigura globalni pristup.
+Da  li je Singleton impementiran u nasem projektu? DA
+Prilikom kreiranja instance klase TravelBook jer postoji samo jedna agencija i nema potrebe instancirati vise puta.
+
+2) Strategy patern (patern ponasanja)
+Koristi se kad zelimo izdvojiti algoritam iz maticne klase i ukljucuje u posebne klas.
+Strategy patern omogucava klijentu izbor jednog od algoritma iz familije algoritama za koristenje.
+Da li je implementiran ? DA
+Prilikom kreiranja putovanja, bira se da li je prevoz autobus ili avion.
+
+3) Iterator patern (patern ponasanja)
+Iterator patern omogu?ava sekvencijalni pristup elementima kolekcije bez poznavanja kako je kolekcija strukturirana.
+Da li je implementiran u nas projekat? NE
+Mogao bi se koristiti da imamo dosta nasljedjivanja i da pri tom ne vodimo racuna kako su liste organizovane.
+
+

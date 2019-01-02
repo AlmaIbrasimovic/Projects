@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Travel Book", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", Style = "color:White;" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Početna", "Index", "Home", new { style = "color:white;" })</li>
+                    <li>@Html.ActionLink("Informacije", "Contact", "Home", new { style = "color:white;" })</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+            
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    input[type=text] {
+                        width: 200px;
+                        height: 15px;
+                        box-sizing: padding-box;
+                        border: 1px solid #ccc;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: 12px;
+                        right: 25px;
+                        left: 25px;
+                        border-radius: 2px;
+                        font-size: 15px;
+                        background-color: white;
+                       
+                       
+                        background-position: 10px 10px;
+                        background-repeat: no-repeat;
+                        padding: 12px 20px 12px 40px;
+                        -webkit-transition: width 0.4s ease-in-out;
+                        transition: width 0.4s ease-in-out;
+                    }
+                        input[type=text]:focus {
+                            width: 100%;
+                        }
+                </style>
+            </head>
+            <body>
+                <form>
+                    <input type="text" name="Pretraga" placeholder="Pretraga destinacija...">
+                </form>
+            </body>
+        </html>
+        </div>
+    </div>
+   
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Travel Book App</p>
+            </footer>
+        </div>
+    
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

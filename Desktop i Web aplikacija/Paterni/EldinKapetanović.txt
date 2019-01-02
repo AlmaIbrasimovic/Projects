@@ -1,0 +1,22 @@
+1.Factory Method - kreacijski patern
+Predstavlja interfejs koji omoguæava kreiranje objekata na naèin da prepušta podklasama odluku o tome koju klasu treba instancirati.
+Za realizaciju ovog paterna potrebna je samo metoda koja na osnovu informacija od strane klijenta ili tekuæeg stanja, instancira odgovarajuæu klasu(izvedenu klasu).
+Ovaj patern se koristi prilikom izbora nekih moguænosti u ovisnosti od datih podataka.
+
+Iskorišten u projektu? NE, mogao bi biti iskorišten kod klase Korisnik, gdje se izvode klase ObicniKorisnik i OnlineKorisnik. 
+Ako se korisnik registrovao putem online aplikacije, sistem posjeduje odreðene informacije koje se razlikuju u odnosu na obiènog korisnika što bi bilo dovoljno za odluku o instanciranju klase.
+
+2.Adapter patern - strukturalni patern
+Osnovna uloga Adapter paterna jeste da omoguæi korištenje interfejsa veæ postojeæe klase za interfejs neke druge klase. 
+Odnosno omoguæava ponovno korištenje neke stare klase èiji interfejs nije kompatibilan sa dizajnom neke nove klase, bez modifikacije njenog izvornog koda.
+
+Iskorišten u projektu? NE, smatram da u ovom periodu našeg projekta nije potreban adapter, jer veæ sve konstruišemo sa odreðenim planom.
+Meðutim, nekad poslije kada budu potrebne izmjene koda, sigurno da æe biti lakše iskoristiti Adapter patern i napraviti kompatibilan interfejs za odreðeni zahtjev klijenta i slièno.
+
+3.State patern - patern ponašanja
+Predstavlja dinamièku verziju Strategy paterna, što bi znaèilo da objekat mijenja naèin ponašanja na osnovu trenutnog stanja.
+Svaka klasa predstavlja odreðeno stanje.
+Kontekst klasa je klasa koja komunicira sa klijent klasom, te održava instancu stanja koja definira tekuæi kontekst i interfejs koji zahtjeva klijent.
+
+Iskorišten u projektu? DA, ne baš formalno kako se koristi, ali konceptualno jeste.
+Prilikom izbora i pregleda prethodnih putovanja, u zavisnosti od izabranog, mijenja se naèin ponašanja i dobijamo podatke izabranog putovanja.

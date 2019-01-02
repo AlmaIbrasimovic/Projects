@@ -1,0 +1,112 @@
+﻿@model TravelBookAspNetMVCAzure.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Registruj se";
+}
+
+<h2>@ViewBag.Title.</h2>
+<html>
+<head>
+    <style>
+        body {
+            background: url(https://cdn-images-1.medium.com/max/1200/1*N_l3sQECv4Yhght8HtwMGg.jpeg) no-repeat bottom fixed;
+            background-size: initial;
+        }       
+    </style>
+</head>
+<body>
+</body>
+</html>
+
+@using (Html.BeginForm("Create", "KorisnikAzures", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Kreirajte novi račun</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ime, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.Ime, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Prezime, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.Prezime, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DatumRod, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.DatumRod, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.JMBG, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.JMBG, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Adresa, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.Adresa, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Telefon, new { @class = "col-md-2 control-label" })
+        <div class="col-md-2">
+            @Html.TextBoxFor(m => m.Telefon, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <form>
+        <fieldset style="width: 500px; margin: -320px auto;  float:right">
+            <legend>Podaci o kreditnoj kartici:</legend>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Tip, new { @class = "col-md-2 control-label" })
+
+                <div class="col-md-2">
+                    <select name="Tip_Kartice" id="tipKartice">
+                        <option value="1" selected="selected">VISA</option>
+                        <option value="2">MasterCard</option>
+                        <option value="3">AmericanExpress</option>
+                        <option value="4">Discover</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.BrojKartice, new { @class = "col-md-2 control-label" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(m => m.BrojKartice, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Istek, new { @class = "col-md-2 control-label" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(m => m.Istek, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CSC, new { @class = "col-md-2 control-label" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(m => m.CSC, new { @class = "form-control" })
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+
+<div style="width: 500px; margin: 5px auto;  float:right;" class="form-group">
+    <div class="col-md-offset-2 col-md-2">
+        <input type="submit" class="btn btn-default" value="Registruj se" />
+    </div>
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

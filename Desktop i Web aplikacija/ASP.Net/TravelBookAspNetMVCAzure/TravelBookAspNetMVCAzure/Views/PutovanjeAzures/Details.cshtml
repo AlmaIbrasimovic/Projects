@@ -1,0 +1,146 @@
+﻿@model TravelBookAspNetMVCAzure.Models.PutovanjeAzure
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>PutovanjeAzure</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.createdAt)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.createdAt)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.updatedAt)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.updatedAt)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.version)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.version)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.deleted)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.deleted)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.datumPolaska)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.datumPolaska)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.datumPovratka)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.datumPovratka)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.minBrojPutnika)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.minBrojPutnika)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.maxBrojPutnika)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.maxBrojPutnika)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.opisPutovanja)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.opisPutovanja)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.istaknuto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.istaknuto)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.idAgencije)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.idAgencije)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.idDestinacije)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.idDestinacije)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.idHotela)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.idHotela)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.idPrevoz)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.idPrevoz)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.cijena)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cijena)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

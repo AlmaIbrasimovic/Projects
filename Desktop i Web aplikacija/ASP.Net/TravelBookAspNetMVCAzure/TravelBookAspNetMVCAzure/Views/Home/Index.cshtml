@@ -1,0 +1,236 @@
+﻿@model IEnumerable<TravelBookAspNetMVCAzure.Models.PutovanjeAzure>
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Travel Book";
+
+
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            /*background: url(https://cdn-images-1.medium.com/max/1200/1*N_l3sQECv4Yhght8HtwMGg.jpeg) no-repeat center;*/
+            background-size: initial;
+        }
+
+        /* Fixed sidenav, full height */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 10;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a, .dropdown-btn {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                border: none;
+                background: none;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+                outline: none;
+            }
+
+                .sidenav a:hover, .dropdown-btn:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            width: 80%;
+            margin-left: 200px;
+            font-size: 20px;
+            padding: 0px 10px;
+        }
+
+        .active {
+            background-color: green;
+            color: white;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .jumbotron {
+            margin-bottom: 0px;
+            text-align: center;
+            height: 210px;
+            color: black;
+            /*text-shadow: black 0.3em 0.3em 0.3em;*/
+            background: transparent;
+        }
+
+        .block {
+            onclick ="alert('Hello world!')"
+        }
+    </style>
+</head>
+<body>   
+    <div class="sidenav">
+        <button class="dropdown-btn">
+            Evropa
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Pariz</a>
+            <a href="#">Berlin</a>
+            <a href="#">Amsterdam</a>
+        </div>
+        <button class="dropdown-btn">
+            Azija
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Peking</a>
+            <a href="#">Bankok</a>
+            <a href="#">Japan</a>
+        </div>
+        <button class="dropdown-btn">
+            Afrika
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Fes</a>
+            <a href="#">Kairo</a>
+        </div>
+        <button class="dropdown-btn">
+            Australija
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Sidnej</a>
+            <a href="#">Melburn</a>
+        </div>
+        <button class="dropdown-btn">
+            Amerika
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Čikago</a>
+            <a href="#">LA</a>
+            <a href="#">Boston</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="jumbotron" resource="">
+            <h1>Travel the world!</h1>
+        </div>
+        <p>@Html.ValidationMessage("pokazi", new { @style = "color:red" })</p>
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <img src="@Html.Action("vratiSliku", "DestinacijaAzures", new { id= item.idDestinacije })" width="272" height="180" alt="Moskva" class="responsive">
+                <h3>@Html.Action("vratiIme", "DestinacijaAzures", new { id = item.idDestinacije })</h3>
+                <h4>
+                    @Html.Action("naziv", "AgencijaAzures", new { id = item.idAgencije })
+                </h4>
+                <body>
+                    <p style="text-align:center">@Html.DisplayFor(modelItem => item.cijena) KM </p>
+                </body>
+                <html>
+                <body>
+                    <p style="text-align:center">@Html.Action("vratiDatum", "PutovanjeAzures", new { datum = item.datumPolaska, datum1 = item.datumPovratka })</p>
+                </body>
+            </html>
+            <p>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+                        .block {
+                            display: block;
+                            width: 100%;
+                            border: none;
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 14px 28px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            text-align: center;
+                        }
+
+                            .block:hover {
+                                background-color: #ddd;
+                                color: black;
+                            }
+                    </style>
+                </head>
+                <body>
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        <button class="block" onclick="location.href='@Url.Action("PosaljiEmail", "Home",new { destinacija = @Html.Action("vratiIme", "DestinacijaAzures", new { id= item.idDestinacije }), ime = User.Identity.GetUserName(), idPutovanja = item.id })'">Rezerviši</button>
+                    }
+                    else
+                    {
+                        // <button class="block" onclick="myFunction()" style="display:none">Rezerviši</button>
+                    }
+                </body>
+            </p>
+            <br> <br />
+        </div>
+    }
+
+        <script>
+
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+</body>
+</html>
+
+
+<script>
+    function myFunction() {
+        // alert("Uspješno ste rezervisali putovanje!");
+
+    }
+</script>
+

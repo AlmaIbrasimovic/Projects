@@ -1,0 +1,83 @@
+﻿@model IEnumerable<TravelBookAspNetMVCAzure.Models.KarticaAzure>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.createdAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.updatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.deleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vrstaKartice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datumIsteka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.broj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.csc)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.createdAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.updatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vrstaKartice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datumIsteka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.broj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.csc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
