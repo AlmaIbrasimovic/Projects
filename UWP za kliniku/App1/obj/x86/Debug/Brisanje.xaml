@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="App1.Brisanje"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock  Foreground="DarkRed" FontFamily="Georgia" FontSize="30"  FontWeight="Bold" HorizontalAlignment="Left" Margin="469,117,0,0" Text="Odaberite opciju:" TextWrapping="Wrap" VerticalAlignment="Top" Width="500"/>
+        <RadioButton x:ConnectionId='1' x:Name="svi" FontSize="20" Foreground="DarkRed" Content="Obrisati sve pacijente" HorizontalAlignment="Left" Margin="600,219,0,0" VerticalAlignment="Top"                      />
+        <RadioButton x:ConnectionId='2' x:Name="jedan" FontSize="20" Foreground="DarkRed" Content="Obrisati jednog pacijenta" HorizontalAlignment="Left" Margin="598,315,0,0" VerticalAlignment="Top"                        />
+        <TextBlock x:ConnectionId='3' x:Name="jmbg" FontSize="20" Foreground="DarkRed" HorizontalAlignment="Left" Margin="246,453,0,0" Text="Odaberite pacijenta:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='4' Foreground="DarkRed" Content="Obrisati" HorizontalAlignment="Left" Margin="482,613,0,0" VerticalAlignment="Top" Height="44" Width="160"                       />
+        <Button x:ConnectionId='5' Foreground="DarkRed" Content="Nazad" HorizontalAlignment="Left" Margin="801,615,0,0" VerticalAlignment="Top" Height="41" Width="159"                     />
+        <ComboBox x:ConnectionId='6' x:Name="JMBG" HorizontalAlignment="Left" Margin="482,452,0,0" VerticalAlignment="Top" Width="292"/>
+
+    </Grid>
+</Page>
+

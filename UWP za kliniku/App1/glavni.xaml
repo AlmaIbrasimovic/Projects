@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="App1.glavni"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="60,72,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="60,122,0,0" Text="Prezime" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="57,183,0,0" Text="Datum rođenja:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="57,241,0,0" Text="Spol:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="58,300,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="57,359,0,0" Text="Bracno stanje:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="60,418,0,0" Text="Zadnji pregled:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="ime1" HorizontalAlignment="Left" Margin="200,65,0,0" Text="" VerticalAlignment="Top" Width="194"/>
+        <TextBox x:Name="prezime1" HorizontalAlignment="Left" Margin="202,116,0,0" Text="" VerticalAlignment="Top" Width="200"/>
+        <CalendarDatePicker x:Name="rod" HorizontalAlignment="Left" Margin="200,175,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="spol1" HorizontalAlignment="Left" Margin="200,231,0,0" Text="" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="jmbg1" HorizontalAlignment="Left" Margin="201,291,0,0" Text="" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="brak1" HorizontalAlignment="Left" Margin="201,349,0,0" Text="" VerticalAlignment="Top" Width="201"/>
+        <CalendarDatePicker x:Name="zadnji" HorizontalAlignment="Left" Margin="201,413,0,0" VerticalAlignment="Top" Width="199"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="600,69,0,0" Text="Alergije:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="599,214,0,0" Text="Bolesti:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="597,350,0,0" Text="Terapije:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Foreground ="DarkRed" HorizontalAlignment="Left" Margin="600,488,0,0" Text="Alergije:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="alergije1" HorizontalAlignment="Left" Margin="695,47,0,0" Text="" VerticalAlignment="Top" Height="85" Width="234"/>
+        <TextBox x:Name="bolesti1" HorizontalAlignment="Left" Margin="692,180,0,0" Text="" VerticalAlignment="Top" Height="85" Width="234"/>
+        <TextBox x:Name="terapije1" HorizontalAlignment="Left" Margin="696,317,0,0" Text="" VerticalAlignment="Top" Height="85" Width="234"/>
+        <TextBox x:Name="misljenja1" HorizontalAlignment="Left" Margin="694,458,0,0" Text="" VerticalAlignment="Top" Height="85" Width="234" TextChanged="misljenja_TextChanged"/>
+        <Button Foreground="DarkRed" Content="Nazad" HorizontalAlignment="Left" Margin="812,616,0,0" VerticalAlignment="Top" Height="41" Width="115" Click="Button_Click"/>
+
+    </Grid>
+</Page>

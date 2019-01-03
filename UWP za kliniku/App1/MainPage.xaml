@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="11,0,0,1">
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="347,272,0,0" Text="User name:" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="120"/>
+        <TextBox x:Name="userName" HorizontalAlignment="Left" Margin="447,270,0,0" Text="" VerticalAlignment="Top" Width="249" TextChanged="TextBox_TextChanged"/>
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="346,323,0,0" Text="Password:" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="120"/>
+        <Button Foreground="DarkRed" Content="Prijavi se" HorizontalAlignment="Left" Margin="340,452,0,0" VerticalAlignment="Top" Height="33" Width="143" Click="Button_Click"/>
+        <Button Foreground="DarkRed" Content="Izlaz" HorizontalAlignment="Left" Margin="585,452,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.323,0.609" Height="34" Width="140" Click="Button_Click_1"/>
+        <PasswordBox x:Name ="lozinka" HorizontalAlignment="Left" Margin="445,318,0,0" VerticalAlignment="Top" Width="251"/>
+        <TextBlock Foreground="Red" FontFamily="Georgia" FontSize="20"  x:Name ="greska" HorizontalAlignment="Left" Margin="767,303,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
+        <TextBlock Foreground="DarkRed" FontFamily="Georgia" FontSize="30"  FontWeight="Bold" HorizontalAlignment="Left" Margin="499,121,0,0" Text="Naša Mala Klinika" TextWrapping="Wrap" VerticalAlignment="Top" Height="67" Width="356"/>
+
+
+    </Grid>
+</Page>

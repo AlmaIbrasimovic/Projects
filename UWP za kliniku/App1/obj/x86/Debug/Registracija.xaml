@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="App1.Registracija"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Right" Width="1480" Margin="0,0,4,0">
+        <TextBlock Foreground="DarkRed"  HorizontalAlignment="Left" Margin="273,78,0,0" Text="Ime: " TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="273,146,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBlock Foreground="DarkRed"  HorizontalAlignment="Left" Margin="272,209,0,0" Text="Spol:" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBlock Foreground="DarkRed"  HorizontalAlignment="Left" Margin="267,285,0,0" Text="Datum rodjenja:" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBlock HorizontalAlignment="Left" Margin="270,369,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="265,354,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:ConnectionId='1' x:Name ="ime" HorizontalAlignment="Left" Margin="430,76,0,0" Text="" VerticalAlignment="Top" Width="234"/>
+        <TextBox x:ConnectionId='2' x:Name ="prezime" HorizontalAlignment="Left" Margin="428,137,0,0" Text="" VerticalAlignment="Top" Width="234"/>
+        <ComboBox x:ConnectionId='3' x:Name ="spol" HorizontalAlignment="Left" Margin="429,201,0,0" VerticalAlignment="Top" Width="233"/>
+        <TextBox x:ConnectionId='4' x:Name ="jmbg" HorizontalAlignment="Left" Margin="430,348,0,0" Text="" VerticalAlignment="Top" Width="234"/>
+        <Button x:ConnectionId='5' Foreground="DarkRed" Content="Registruj" HorizontalAlignment="Left" Margin="905,523,0,0" VerticalAlignment="Top" RenderTransformOrigin="7.692,0.469" Width="185" Height="50"                     />
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="261,418,0,0" Text="Tip pacijeta:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox x:ConnectionId='6' x:Name ="tip" HorizontalAlignment="Left" Margin="430,413,0,0" VerticalAlignment="Top" Width="233"/>
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="260,483,0,0" Text="Bračno stanje:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox x:ConnectionId='7'  x:Name ="brak" HorizontalAlignment="Left" Margin="430,478,0,0" VerticalAlignment="Top" Width="233"/>
+        <TextBlock Foreground="DarkRed" HorizontalAlignment="Left" Margin="260,543,0,0" Text="Prijem u bolnicu:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <CalendarDatePicker x:ConnectionId='8' x:Name ="rod" HorizontalAlignment="Left" Margin="430,273,0,0" VerticalAlignment="Top" Width="235"/>
+        <CalendarDatePicker x:ConnectionId='9' x:Name ="prijem" HorizontalAlignment="Left" Margin="430,538,0,0" VerticalAlignment="Top" Width="230"/>
+        <Button x:ConnectionId='10' Foreground="DarkRed" Content="Nazad" HorizontalAlignment="Left" Margin="909,633,0,0" VerticalAlignment="Top" Width="180" Height="52"                       />
+
+
+    </Grid>
+</Page>
+
