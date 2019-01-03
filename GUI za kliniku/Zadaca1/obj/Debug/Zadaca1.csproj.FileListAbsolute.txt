@@ -1,0 +1,75 @@
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\Zadaca1.exe.config
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\Zadaca1.exe
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\Zadaca1.pdb
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\medicinskaSestra.dll
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.csprojResolveAssemblyReference.cache
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.csproj.CoreCompileInputs.cache
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.exe
+C:\Users\belma\Desktop\ETF MATERIJALI I\RPR\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.pdb
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\Zadaca1.exe.config
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\Zadaca1.exe
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\Zadaca1.pdb
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\bin\Debug\medicinskaSestra.dll
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Forme.Analiza.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Doktori1.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Form1.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.DoktorForma.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Info.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.KartonForma.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.KartonPacijent.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.LogInPacijenta.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Mrtvacnica.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Novo.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.OstaliForma.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.PacijentIzbornik.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.PopunjavanjeKartona.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Pregledi.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Pretrage.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.PrikazKartona.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Properties.Resources.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Redovi.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Registracija.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Slika.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.SviPacijenti.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.ZakazaniPregledi.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.csproj.GenerateResource.Cache
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.csproj.CoreCompileInputs.cache
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.exe
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.pdb
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.csprojResolveAssemblyReference.cache
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Forme.Racun.resources
+C:\Users\belma\Desktop\Zadaca1RPR\Zadaca1\Zadaca1\obj\Debug\Zadaca1.Forme.Brisanje.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\bin\Debug\Zadaca1.exe.config
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\bin\Debug\Zadaca1.exe
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\bin\Debug\Zadaca1.pdb
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\bin\Debug\medicinskaSestra.dll
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.csprojAssemblyReference.cache
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Forme.Analiza.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Forme.Brisanje.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Doktori1.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Form1.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.DoktorForma.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Info.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.KartonForma.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.KartonPacijent.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.LogInPacijenta.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Mrtvacnica.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Novo.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.OstaliForma.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.PacijentIzbornik.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.PopunjavanjeKartona.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Pregledi.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Pretrage.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.PrikazKartona.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Forme.Racun.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Properties.Resources.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Redovi.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Registracija.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.Slika.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.SviPacijenti.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.ZakazaniPregledi.resources
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.csproj.GenerateResource.cache
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.csproj.CoreCompileInputs.cache
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.csproj.CopyComplete
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.exe
+C:\Users\belma\Documents\GitHub\Projects\GUI za kliniku\Zadaca1\obj\Debug\Zadaca1.pdb
