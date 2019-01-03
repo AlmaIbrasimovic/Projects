@@ -1,3 +1,4 @@
 # Projects
-C++, C# and C projects
+
+C++, C#,C, HTML, JS projects
 
