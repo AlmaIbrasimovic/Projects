@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "commiti.gspec",
+    "startedAt" : 1541189331025,
+    "endedAt" : 1541189346636,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 11,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 11
+    },
+    "testId" : "1-commiti.gspec",
+    "duration" : 15611,
+    "failed" : false
+  } ]
+}

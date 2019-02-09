@@ -1,0 +1,8 @@
+@objects
+    login #login
+    forma-* .forma
+
+= login =
+    login:
+        aligned horizontally all login
+        aligned vertically all login

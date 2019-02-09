@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "addZadatak.gspec",
+    "startedAt" : 1541190649129,
+    "endedAt" : 1541190663897,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 11,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 11
+    },
+    "testId" : "1-addzadatak.gspec",
+    "duration" : 14768,
+    "failed" : false
+  } ]
+}

@@ -1,0 +1,197 @@
+{
+  "testId" : "1-commiti.gspec",
+  "name" : "commiti.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  commiti.gspec --url http://localhost/commiti.html --size 1376x766 --htmlreport commiti(1376x766)",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: commiti.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541189344180,
+          "sections" : [ {
+            "name" : "footer",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 10
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 12
+                },
+                "name" : "aligned horizontally bottom footer",
+                "highlight" : [ "footer", "footer" ]
+              } ]
+            } ]
+          }, {
+            "name" : "header",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 14
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "aligned horizontally top header",
+                "highlight" : [ "header", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "logo",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 18
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "aligned vertically left logo",
+                "highlight" : [ "logo", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "aligned vertically right logo",
+                "highlight" : [ "logo", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "naziv",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 23
+            },
+            "objects" : [ {
+              "name" : "naziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 25
+                },
+                "name" : "inside header",
+                "highlight" : [ "naziv", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "glavni",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 27
+            },
+            "objects" : [ {
+              "name" : "glavni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "width ~ 100% of screen/width",
+                "highlight" : [ "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "below header",
+                "highlight" : [ "glavni", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "above com",
+                "highlight" : [ "glavni", "com" ]
+              } ]
+            } ]
+          }, {
+            "name" : "tabela",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 32
+            },
+            "objects" : [ {
+              "name" : "com",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "inside body",
+                "highlight" : [ "com", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "below glavni",
+                "highlight" : [ "com", "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "above footer",
+                "highlight" : [ "com", "footer" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "com" : {
+              "area" : [ 54, 262, 613, 218 ]
+            },
+            "footer" : {
+              "area" : [ 0, 630, 1364, 55 ]
+            },
+            "glavni" : {
+              "area" : [ 54, 138, 1364, 84 ]
+            },
+            "naziv" : {
+              "area" : [ 1045, 15, 225, 32 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1368, 84 ]
+            },
+            "logo" : {
+              "area" : [ 2, 2, 30, 30 ]
+            },
+            "body" : {
+              "area" : [ 0, 0, 1364, 685 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541189341397,
+        "type" : "node"
+      } ],
+      "time" : 1541189331041,
+      "type" : "node"
+    } ]
+  }
+}

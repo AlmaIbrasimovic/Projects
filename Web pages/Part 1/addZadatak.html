@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodaj zadatak</title>
+        <link rel="stylesheet" href="addZadatak.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href = "zadaci.html">Pregled godina</a> &nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "addGodina.html">Dodavanje godine</a>&nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "studenti.html">Pregled studenata</a>&nbsp;</li>
+            </ul>
+            <p class = "naziv">Dodavanje zadatka</p>
+        </div>
+        <div id = "glavniSadrzaj">
+            <form id = "noviZadatak">
+                <h4>Novi zadatak</h4>
+                <p>Naziv zadatka</p>
+                <input type = "text" name = "naziv" required>
+                <p id ="drugi" >Tekst postavke *</p>
+                <input type ="file" name ="postavka" required> 
+                <p id="treci">Vježbe/Spirale</p>
+                <select id = "vjezbe">
+                        <option value="X" selected>Vježba X</option>
+                        <option value="Y">Vježba Y</option>
+                        <option value="Z">Vježba Z</option>
+                </select>
+                <br><br>
+                <input type = "submit" value = "Dodaj">
+            </form>          
+        </div>
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>

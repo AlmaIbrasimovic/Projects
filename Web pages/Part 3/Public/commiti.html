@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Commiti</title>
+        <link rel="stylesheet" href="commiti.css">
+        <script src = "committabela.js"></script>
+        <script src ="commiti.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href="studenti.html">Pregled studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="zadaci.html">Odabir vježbe</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="commiti.html">Pregled commita</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addZadatak.html">Dodavanje zadatka</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addVjezba.html">Dodavanje vježbe/spirale</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addStudent.html">Dodavanje studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addGodina.html">Dodavanje godine</a></li> 
+            </ul>
+            <p class = "naziv">Pregled commita</p>
+        </div>
+        <div id = "glavni">
+            <p>Student: Neko Nekić, 1234</p>
+            <p>Naziv vježbe/spirale: Vježba 1</p>
+            <p>Repezitorij:&nbsp;&nbsp;&nbsp;&nbsp;<a href = "https://bitbucket.org">Hyperlink</a> </p>
+        </div>
+        <div id = "unos">
+            <form id ="dodanje">
+            <p>Ako dodajete commit:</p>
+            <input type = "text" id ="dodavanjeRed" placeholder="Unesite broj reda"><br><br> 
+            <input type="text" id ="dodavanjeUrl" placeholder="Unesite URL">
+        </form>
+        <form id ="brisanje">
+            <p>Ako brišete commit:</p>
+            <input type = "text" id ="brisanjeRed" placeholder="Unesite broj reda"><br><br>
+            <input type="text" id ="brisanjeKolona" placeholder="Unesite broj kolone">
+        </form>
+        <form id ="editovanje">
+            <p>Ako editujete commit:</p>
+            <input type = "text" id ="editovanjeRed" placeholder="Unesite broj reda"><br><br>
+            <input type="text" id ="editovanjeKolona" placeholder="Unesite broj kolone"><br><br>
+            <input type="text" id ="editovanjeUrl" placeholder="Unesite URL">
+        </form>
+        </div>
+        <form id = "forma">
+            <input type = "button" class = "dugme" value ="Nacrtaj tabelu" onclick="nacrtaj()">
+            <input type="button" class = "dugme" value="Dodaj commit" onclick="dodajCommit()">
+            <input type="button" class ="dugme" value = "Obriši commit" onclick="obrisiCommit()">
+            <input type="button" class ="dugme" value = "Edituj commit" onclick="editovanjeCommit()">
+            <div id="mojDiv"></div>
+        </form>
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>

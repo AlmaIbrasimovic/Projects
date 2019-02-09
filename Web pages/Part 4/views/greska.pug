@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+  head
+    title= Greska
+  body
+    p #{greskaIspis()}
+    input(
+        type='button'
+        value='Nazad'
+        onclick = "history.back()"
+    )

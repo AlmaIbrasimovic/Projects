@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodaj studenta</title>
+        <link rel="stylesheet" href="addStudent.css">
+        <script src="addStudent.js"></script>
+        <script src="validacija.js"></script>
+        <script src="postAJAX.js"></script>
+        <script src="citanjeGodina.js"></script>
+
+        <meta charset="UTF-8">
+    </head>
+    <body onload="pozoviGodine()" >
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href="studenti.html">Pregled studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="zadaci.html">Odabir vježbe</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="commiti.html">Pregled commita</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addZadatak.html">Dodavanje zadatka</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addVjezba.html">Dodavanje vježbe/spirale</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addStudent.html">Dodavanje studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addGodina.html">Dodavanje godine</a></li>  
+            </ul>
+            <p class = "naziv">Dodavanje studenata</p>
+        </div>
+        <div id = "glavniSadrzaj">
+            <div id = "validator"></div>
+            <div class="druga">
+                <form name ="fMasovni" >
+                    <p class = "drugaSporedna">Godine</p>
+                    <select name ="sGodina"></select><br>
+                    <p class="drugaSporedna">Key</p>
+                    <input type="text" name ="key">
+                    <p class="drugaSporedna">Secret</p>
+                    <input type="text" name="secret"><br>
+                    <input type="button" value="Učitaj" onclick="bit()"><br><br>
+                    <input type="button" value="Dodaj" disabled onclick="pozoviPOST()">
+                
+                </form>
+            </div> 
+        </div>
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+        <script src="BitBucket.js"></script>
+    </body>
+</html>

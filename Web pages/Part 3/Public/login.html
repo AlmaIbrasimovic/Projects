@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css">
+        <script src="login.js"></script>
+        <script src="validacija.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="login">
+            <form class = "forma" action = "#">
+                <label class = "label" for="username">username</label> <input type = "text" id = "username"  name = "username" placeholder="Unesite korisničko ime">
+                <br><br>
+                <label class = "label" for="password">password</label> <input type = "password" id = "password" name = "password" placeholder="Unesite password">
+                <br><br>
+                <input type = "submit" value="Login" class = "button" onclick="return test()">
+                <div id = "validator"></div>
+            </form>
+        </div>
+    </body>
+</html>

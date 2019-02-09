@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "addStudent1.gspec",
+    "startedAt" : 1541192313959,
+    "endedAt" : 1541192326019,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 0,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "1-addstudent1.gspec",
+    "duration" : 12060,
+    "failed" : true
+  } ]
+}

@@ -1,0 +1,55 @@
+@objects 
+    logo #logo
+    header #header
+    footer #footer
+    naziv .naziv
+    polovina .polovina
+    cet .cetvrtina
+    item .item
+    folder .folder
+    forma #forma
+    god #godina
+
+= polovina =
+    polovina: 
+        width ~ 100 % of screen/width
+        below cet
+
+= cetvrtina =
+    cet:
+        width ~ 100 % of screen/width
+        below header
+  
+= footer =
+    footer:
+        aligned horizontally bottom footer
+
+= header =
+    header:
+        aligned horizontally top header
+
+= logo =
+    logo:
+        aligned vertically left logo
+        aligned vertically right logo
+
+= naziv =
+    naziv:
+        inside header
+
+= folder =
+    folder:
+        inside polovina
+
+= item =
+    item:
+        inside folder
+
+= forma =
+    forma:
+      aligned horizontally all forma
+
+= godina =
+    god:
+        aligned horizontally all god
+        inside cet

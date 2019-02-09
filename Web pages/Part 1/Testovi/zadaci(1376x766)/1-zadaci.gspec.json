@@ -1,0 +1,278 @@
+{
+  "testId" : "1-zadaci.gspec",
+  "name" : "zadaci.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  zadaci.gspec --url http://localhost/zadaci.html --size 1376x766 --htmlreport zadaci(1376x766)",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: zadaci.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541187498115,
+          "sections" : [ {
+            "name" : "polovina",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "polovina",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "width ~ 50 % of screen/width",
+                "highlight" : [ "polovina" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "right-of cet",
+                "highlight" : [ "polovina", "cet" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "below header",
+                "highlight" : [ "polovina", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "cetvrtina",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 19
+            },
+            "objects" : [ {
+              "name" : "cet",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "width ~ 25 % of screen/width",
+                "highlight" : [ "cet" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "below header",
+                "highlight" : [ "cet", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "footer",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "aligned horizontally bottom footer",
+                "highlight" : [ "footer", "footer" ]
+              } ]
+            } ]
+          }, {
+            "name" : "header",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 28
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "aligned horizontally top header",
+                "highlight" : [ "header", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "logo",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 32
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "aligned vertically left logo",
+                "highlight" : [ "logo", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "aligned vertically right logo",
+                "highlight" : [ "logo", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "naziv",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 37
+            },
+            "objects" : [ {
+              "name" : "naziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "inside header",
+                "highlight" : [ "naziv", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "folder",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 41
+            },
+            "objects" : [ {
+              "name" : "folder",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "inside polovina",
+                "highlight" : [ "folder", "polovina" ]
+              } ]
+            } ]
+          }, {
+            "name" : "item",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 45
+            },
+            "objects" : [ {
+              "name" : "item",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "inside folder",
+                "highlight" : [ "item", "folder" ]
+              } ]
+            } ]
+          }, {
+            "name" : "forma",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 49
+            },
+            "objects" : [ {
+              "name" : "forma",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "aligned horizontally all forma",
+                "highlight" : [ "forma", "forma" ]
+              } ]
+            } ]
+          }, {
+            "name" : "godina",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 53
+            },
+            "objects" : [ {
+              "name" : "god",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "aligned horizontally all god",
+                "highlight" : [ "god", "god" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 56
+                },
+                "name" : "inside cet",
+                "highlight" : [ "god", "cet" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "item" : {
+              "area" : [ 759, 196, 124, 51 ]
+            },
+            "cet" : {
+              "area" : [ 0, 83, 343, 685 ]
+            },
+            "folder" : {
+              "area" : [ 729, 130, 601, 239 ]
+            },
+            "footer" : {
+              "area" : [ 0, 648, 1364, 36 ]
+            },
+            "naziv" : {
+              "area" : [ 1087, 15, 183, 32 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1368, 83 ]
+            },
+            "logo" : {
+              "area" : [ 2, 2, 30, 30 ]
+            },
+            "forma" : {
+              "area" : [ 343, 170, 341, 247 ]
+            },
+            "god" : {
+              "area" : [ 67, 206, 206, 207 ]
+            },
+            "polovina" : {
+              "area" : [ 693, 83, 670, 685 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541187494847,
+        "type" : "node"
+      } ],
+      "time" : 1541187484324,
+      "type" : "node"
+    } ]
+  }
+}

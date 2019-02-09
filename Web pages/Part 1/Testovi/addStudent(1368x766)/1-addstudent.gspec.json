@@ -1,0 +1,218 @@
+{
+  "testId" : "1-addstudent.gspec",
+  "name" : "addStudent.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  addStudent.gspec --url http://localhost/addStudent.html --size 1368x766 --htmlreport addStudent(1368x766)",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: addStudent.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541192057775,
+          "sections" : [ {
+            "name" : "footer",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 11
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 13
+                },
+                "name" : "aligned horizontally bottom footer",
+                "highlight" : [ "footer", "footer" ]
+              } ]
+            } ]
+          }, {
+            "name" : "header",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 15
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "aligned horizontally top header",
+                "highlight" : [ "header", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "logo",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 19
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "aligned vertically left logo",
+                "highlight" : [ "logo", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "aligned vertically right logo",
+                "highlight" : [ "logo", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "naziv",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "naziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside header",
+                "highlight" : [ "naziv", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "glavniSadrzaj",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 28
+            },
+            "objects" : [ {
+              "name" : "glavni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "width ~ 85% of screen/width",
+                "highlight" : [ "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "below header",
+                "highlight" : [ "glavni", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "aligned horizontally all glavni",
+                "highlight" : [ "glavni", "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "aligned vertically all glavni",
+                "highlight" : [ "glavni", "glavni" ]
+              } ]
+            } ]
+          }, {
+            "name" : "forma",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 35
+            },
+            "objects" : [ {
+              "name" : "forma",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside prva",
+                "highlight" : [ "forma", "prva" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "inside glavni",
+                "highlight" : [ "forma", "glavni" ]
+              } ]
+            } ]
+          }, {
+            "name" : "druga",
+            "place" : {
+              "filePath" : "addStudent.gspec",
+              "lineNumber" : 40
+            },
+            "objects" : [ {
+              "name" : "druga",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addStudent.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "inside glavni",
+                "highlight" : [ "druga", "glavni" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "footer" : {
+              "area" : [ 0, 662, 1356, 22 ]
+            },
+            "glavni" : {
+              "area" : [ 101, 83, 1152, 691 ]
+            },
+            "druga" : {
+              "area" : [ 355, 410, 691, 226 ]
+            },
+            "naziv" : {
+              "area" : [ 981, 15, 281, 32 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1360, 83 ]
+            },
+            "logo" : {
+              "area" : [ 2, 2, 30, 30 ]
+            },
+            "prva" : {
+              "area" : [ 355, 90, 691, 308 ]
+            },
+            "forma" : {
+              "area" : [ 355, 90, 691, 268 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541192055586,
+        "type" : "node"
+      } ],
+      "time" : 1541192047156,
+      "type" : "node"
+    } ]
+  }
+}

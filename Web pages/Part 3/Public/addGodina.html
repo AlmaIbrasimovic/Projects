@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodaj godinu</title>
+        <link rel="stylesheet" href="addGodina.css">
+        <script src="addGodina.js"></script>
+        <script src="validacija.js"></script>
+        <script src = "GodineAjax.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body onload = "pozoviAJAX();">
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                    <li class="lista"><a href="studenti.html">Pregled studenata</a>&nbsp;&nbsp;</li>
+                    <li class="lista"><a href="zadaci.html">Odabir vježbe</a>&nbsp;&nbsp;</li>
+                    <li class="lista"><a href="commiti.html">Pregled commita</a>&nbsp;&nbsp;</li>
+                    <li class="lista"><a href="addZadatak.html">Dodavanje zadatka</a>&nbsp;&nbsp;</li>
+                    <li class="lista"><a href="addVjezba.html">Dodavanje vježbe/spirale</a>&nbsp;&nbsp;</li>
+                    <li class="lista"><a href="addStudent.html">Dodavanje studenata</a>&nbsp;&nbsp;</li>
+                    <li class="lista"><a href="addGodina.html">Dodavanje godine</a></li>    
+            </ul>
+            <p class = "naziv">Dodavanje godine</p>
+        </div>
+        <div id = "side">
+            <p id ="glavna">Unos godine:</p> <br>
+            <form action="http://localhost:8080/addGodina" method = "POST" onsubmit="return test();">
+                <p class = "sporedne">Naziv godine</p> 
+                <input type ="text" name = "nazivGod" id ="prvi" required >
+                <p class = "sporedne">Naziv repozitorija vježbe</p> 
+                <input type ="text" name ="nazivRepVje" id = "drugi" required><br>
+                <p class = "sporedne">Nazivi repozitorija spirale</p>
+                <input type ="text" name = "nazivRepSpi" id = "treci" required><br>
+                <input type ="reset" value="Poništi">
+                <input type = "submit" value ="Unesi">    
+            </form>
+            <div id ="validator"></div>
+        </div>
+        <div id = "glavniSadrzaj">    
+        </div> 
+
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+       
+    </body>
+</html>

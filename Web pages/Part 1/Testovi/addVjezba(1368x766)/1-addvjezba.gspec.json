@@ -1,0 +1,215 @@
+{
+  "testId" : "1-addvjezba.gspec",
+  "name" : "addVjezba.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  addVjezba.gspec --url http://localhost/addVjezba.html --size 1368x766 --htmlreport addVjezba(1368x766)",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: addVjezba.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541191285298,
+          "sections" : [ {
+            "name" : "footer",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 11
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 13
+                },
+                "name" : "aligned horizontally bottom footer",
+                "highlight" : [ "footer", "footer" ]
+              } ]
+            } ]
+          }, {
+            "name" : "header",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 15
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "aligned horizontally top header",
+                "highlight" : [ "header", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "logo",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 19
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "aligned vertically left logo",
+                "highlight" : [ "logo", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "aligned vertically right logo",
+                "highlight" : [ "logo", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "naziv",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "naziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside header",
+                "highlight" : [ "naziv", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "glavniSadrzaj",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 28
+            },
+            "objects" : [ {
+              "name" : "glavni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "width ~ 85% of screen/width",
+                "highlight" : [ "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "below header",
+                "highlight" : [ "glavni", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "aligned horizontally all glavni",
+                "highlight" : [ "glavni", "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "aligned vertically all glavni",
+                "highlight" : [ "glavni", "glavni" ]
+              } ]
+            } ]
+          }, {
+            "name" : "forma",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 35
+            },
+            "objects" : [ {
+              "name" : "forma",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside druga",
+                "highlight" : [ "forma", "druga" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "inside glavni",
+                "highlight" : [ "forma", "glavni" ]
+              } ]
+            } ]
+          }, {
+            "name" : "druga",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 40
+            },
+            "objects" : [ {
+              "name" : "druga",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "inside glavni",
+                "highlight" : [ "druga", "glavni" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "footer" : {
+              "area" : [ 0, 662, 1356, 22 ]
+            },
+            "glavni" : {
+              "area" : [ 101, 83, 1152, 691 ]
+            },
+            "druga" : {
+              "area" : [ 355, 321, 691, 332 ]
+            },
+            "naziv" : {
+              "area" : [ 930, 15, 332, 32 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1360, 83 ]
+            },
+            "logo" : {
+              "area" : [ 2, 2, 30, 30 ]
+            },
+            "forma" : {
+              "area" : [ 355, 321, 691, 330 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541191282437,
+        "type" : "node"
+      } ],
+      "time" : 1541191272149,
+      "type" : "node"
+    } ]
+  }
+}

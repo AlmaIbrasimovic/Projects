@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "zadaci1.gspec",
+    "startedAt" : 1541187788900,
+    "endedAt" : 1541187805383,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 14,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 14
+    },
+    "testId" : "1-zadaci1.gspec",
+    "duration" : 16483,
+    "failed" : false
+  } ]
+}

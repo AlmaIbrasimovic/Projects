@@ -1,0 +1,25 @@
+{
+  "testId" : "1-addstudent1.gspec",
+  "name" : "addStudent1.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  addStudent1.gspec --url http://localhost/addStudent.html --size 500x766 --htmlreport addStudent(500x766)",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "SyntaxException: Incorrect side for horizontal alignment: left\n    in addStudent1.gspec:22",
+          "status" : "error",
+          "time" : 1541192322603,
+          "stacktrace" : "com.galenframework.parser.SyntaxException: Incorrect side for horizontal alignment: left\n    in addStudent1.gspec:22\r\n\tat com.galenframework.speclang2.specs.SpecAlignedProcessor.createHorizontalSpec(SpecAlignedProcessor.java:75)\r\n\tat com.galenframework.speclang2.specs.SpecAlignedProcessor.process(SpecAlignedProcessor.java:58)\r\n\tat com.galenframework.speclang2.specs.SpecReader.read(SpecReader.java:115)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processSpec(PageSectionProcessor.java:220)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processObject(PageSectionProcessor.java:191)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processSection(PageSectionProcessor.java:75)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.process(PageSectionProcessor.java:63)\r\n\tat com.galenframework.speclang2.pagespec.PostProcessor.processNode(PostProcessor.java:39)\r\n\tat com.galenframework.speclang2.pagespec.PostProcessor.process(PostProcessor.java:33)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:62)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:45)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:68)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:59)\r\n\tat com.galenframework.suite.actions.GalenPageActionCheck.execute(GalenPageActionCheck.java:53)\r\n\tat com.galenframework.runner.GalenPageRunner.executeAction(GalenPageRunner.java:84)\r\n\tat com.galenframework.runner.GalenPageRunner.run(GalenPageRunner.java:76)\r\n\tat com.galenframework.runner.GalenBasicTestRunner.runTest(GalenBasicTestRunner.java:76)\r\n\tat com.galenframework.tests.GalenBasicTest.execute(GalenBasicTest.java:55)\r\n\tat com.galenframework.TestRunnable.runTest(TestRunnable.java:75)\r\n\tat com.galenframework.TestRunnable.run(TestRunnable.java:101)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)\r\n\tat java.lang.Thread.run(Unknown Source)\r\n",
+          "type" : "node"
+        } ],
+        "time" : 1541192322168,
+        "type" : "node"
+      } ],
+      "time" : 1541192313975,
+      "type" : "node"
+    } ]
+  }
+}

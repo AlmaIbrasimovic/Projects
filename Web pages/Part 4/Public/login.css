@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(57, 100, 198);
+}
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+::placeholder {
+    color: black;
+}
+
+#login {    
+    background-color: rgb(224,224,224);
+    right: 50%;
+    height: 33%;
+    width: 300px;
+    text-align: center;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    position: absolute;
+}
+
+.button {
+    border: 1px solid rgb(128,128,128);
+    margin-left:20%;
+    margin-top:10%;
+    border-radius: 4px;
+    width: 35%;
+    background-color: rgb(224,224,224);
+    height: 23px;
+}
+
+.label {
+    padding-right:3px;
+    font-size: 16px;
+}
+
+.forma {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 18%;
+}
+
+input[type = text] {
+    border-radius: 3px;
+    border: 1px solid rgb(128,128,128);
+    height: 18px;
+}
+
+input[type = password] {
+    border-radius: 3px;
+    border: 1px solid rgb(128,128,128);
+    height: 18px;
+}
+#validator {
+    position: relative;
+    top:10px;
+}
+@media screen and (max-height: 600px) {
+    #login {    
+        height: 150px;
+    }
+    .button {
+        position: relative;
+        top:-35px;
+        left:15%;
+    }
+}

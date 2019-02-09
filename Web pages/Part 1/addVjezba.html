@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodavanje vježbe/spirale</title>
+        <link rel="stylesheet" href="addVjezba.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href = "zadaci.html">Pregled godina</a> &nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "addGodina.html">Dodavanje godine</a>&nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "studenti.html">Pregled studenata</a>&nbsp;</li>
+            </ul>
+            <p class = "naziv">Dodavanje vježbe/spirale</p>
+        </div>
+        <div id = "glavniSadrzaj">
+            <div class="prva">
+                <form name ="fNova">
+                    <p class="glavna">Dodavanje postojeće vježbe/spirale</p>
+                    <p class ="sporedne">Godina</p>
+                    <select class = "godina" name = "sGodine">
+                        <option value="X" selected>2018/19</option>
+                        <option value="Y">2017/18</option>
+                        <option value="Z">2016/17</option>
+                    </select>
+                    <p class ="sporedne">Vježba/Spirale</p>
+                    <select id = "vjezbe" name ="sVjezbe">
+                        <option value="X" selected>Vježba X</option>
+                        <option value="Y">Vježba Y</option>
+                        <option value="Z">Vježba Z</option>
+                    </select>
+                  <br>
+                 <input type = "submit" value = "Dodaj">
+                </form>
+            </div>
+            <div class = "druga">
+                <form name="fPostojeca" id = "prva">
+                    <p class="glavna">Nova vježba/spirala</p>
+                    <p class = "drugaSporedna">Naziv vježbe</p>
+                    <input type = "text" name="Vježba X" required>
+                    <p class ="drugaSporedna">Godina</p>
+                    <select class = "godina" name ="sGodine">
+                        <option value="X" selected>2018/19</option>
+                        <option value="Y">2017/18</option>
+                        <option value="Z">2016/17</option>
+                    </select>
+                    <br><br>
+                    <textarea id ="tekst" name="message" rows="4" cols="9">Zadatak 1 Zadatak 2 Zadatak 3</textarea>
+                    <br><br>
+                    <select id = "zadatak" name ="sZadata">
+                        <option value="X" selected>Zadatak X</option>
+                        <option value="Y">Zadatak Y</option>
+                        <option value="Z">Zadatak Z</option>
+                    </select>
+                    <input type ="button" id="buton" name ="dZadatak" value = "Dodaj zadatak">
+                    <br><br>
+                    <input type ="checkbox">   Spirala
+                 
+                    <input type ="button" name ="dZadatak" id="dodaj" value = "Dodaj"> 
+                </form>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>

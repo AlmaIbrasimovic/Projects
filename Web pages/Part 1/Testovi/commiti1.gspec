@@ -1,0 +1,36 @@
+@objects 
+    logo #logo
+    header #header
+    footer #footer
+    naziv .naziv
+    glavni #glavni
+    com #commiti
+    body body
+
+= footer =
+    footer:
+        aligned horizontally bottom footer
+
+= header =
+    header:
+        aligned horizontally top header
+
+= logo =
+    logo:
+        aligned vertically left logo
+        aligned vertically right logo
+
+= naziv =
+    naziv:
+        inside header
+
+= glavni =
+    glavni:
+        width ~ 100% of screen/width
+        below header
+        above com
+= tabela =
+    com:
+        inside body
+        below glavni
+        above footer

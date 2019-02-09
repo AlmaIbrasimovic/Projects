@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodaj zadatak</title>
+        <link rel="stylesheet" href="addZadatak.css">
+        <script src="addZadatak.js"></script>
+        <script src="validacija.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href="studenti.html">Pregled studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="zadaci.html">Odabir vježbe</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="commiti.html">Pregled commita</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addZadatak.html">Dodavanje zadatka</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addVjezba.html">Dodavanje vježbe/spirale</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addStudent.html">Dodavanje studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addGodina.html">Dodavanje godine</a></li>  
+            </ul>
+            <p class = "naziv">Dodavanje zadatka</p>
+        </div>
+        <div id = "glavniSadrzaj">
+            <form id = "noviZadatak" action="#">
+                <h4>Novi zadatak</h4>
+                <p>Naziv zadatka</p>
+                <input type = "text" name = "naziv" id = "prvi" required>
+                <div id = "validator"></div>
+                <p id ="drugi" >Tekst postavke *</p>
+                <input type ="file" name ="postavka" required> 
+                <p id="treci">Vježbe/Spirale</p>
+                <select id = "vjezbe">
+                        <option value="X" selected>Vježba X</option>
+                        <option value="Y">Vježba Y</option>
+                        <option value="Z">Vježba Z</option>
+                </select>
+                <br><br>
+                <input type = "submit" value = "Dodaj" onclick="return test()">
+            </form>          
+        </div>
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>

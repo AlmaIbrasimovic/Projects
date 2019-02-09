@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodaj studenta</title>
+        <link rel="stylesheet" href="addStudent.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href = "zadaci.html">Pregled godina</a> &nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "addGodina.html">Dodavanje godine</a>&nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "studenti.html">Pregled studenata</a>&nbsp;</li>
+            </ul>
+            <p class = "naziv">Dodavanje studenata</p>
+        </div>
+        <div id = "glavniSadrzaj">
+            <div class = "prva">
+                <form name="fPojedinacni" id = "prva">
+                    <p class="glavna">Pojedinačni unos</p>
+                    <p class = "drugaSporedna">Godina</p>
+                    <select class = "godina" name ="sGodine">
+                        <option value="X" selected>2018/19</option>
+                        <option value="Y">2017/18</option>
+                        <option value="Z">2016/17</option>
+                    </select>
+                    <p class ="drugaSporedna">Ime i prezime</p>
+                    <input type = "text" name = "ime" required>
+                    <p class ="drugaSporedna">Index</p>
+                    <input type = "number" name = "index" required>
+                    <p class ="drugaSporedna">Email</p>
+                    <input type = "email" name = "email" required>
+                    <br>
+                    <input type = "submit" name = "submit" value = "Unesi">
+                </form>
+            </div>
+        <div class="druga">
+            <form name ="fMasovni">
+                <p class="glavna">Masovni unos</p>
+                <p class ="sporedne">Godina</p>
+                <select class = "godina" name = "godina">
+                    <option value="X" selected>2018/19</option>
+                    <option value="Y">2017/18</option>
+                    <option value="Z">2016/17</option>
+                </select>
+                <p class ="sporedne">CSV fajl</p> 
+                <input type ="file" name ="csv lista" > 
+                <br><br>
+                <input type = "submit" id = "zadnji" name = "submit" value = "Unesi">
+            </form>
+        </div> 
+        </div>
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "testId" : "1-studenti.gspec",
+  "name" : "studenti.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  studenti.gspec --url http://localhost/studentiA.html --size 1024x768 --htmlreport izvjestaji",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: studenti.gspec included tags: ",
+          "status" : "error",
+          "time" : 1541265709324,
+          "sections" : [ {
+            "name" : "side",
+            "place" : {
+              "filePath" : "studenti.gspec",
+              "lineNumber" : 9
+            },
+            "objects" : [ {
+              "name" : "side",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 11
+                },
+                "name" : "width ~ 35 % of screen/width",
+                "highlight" : [ "side" ]
+              } ]
+            } ]
+          }, {
+            "name" : "glavni",
+            "place" : {
+              "filePath" : "studenti.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "glavni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "width ~ 65 % of screen/width",
+                "highlight" : [ "glavni" ]
+              } ]
+            } ]
+          }, {
+            "name" : "footer",
+            "place" : {
+              "filePath" : "studenti.gspec",
+              "lineNumber" : 17
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "aligned horizontally bottom footer",
+                "highlight" : [ "footer", "footer" ]
+              } ]
+            } ]
+          }, {
+            "name" : "header",
+            "place" : {
+              "filePath" : "studenti.gspec",
+              "lineNumber" : 21
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "aligned horizontally top header",
+                "highlight" : [ "header", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "logo",
+            "place" : {
+              "filePath" : "studenti.gspec",
+              "lineNumber" : 25
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "aligned vertically left logo",
+                "highlight" : [ "logo", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "aligned vertically right logo",
+                "highlight" : [ "logo", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "naziv",
+            "place" : {
+              "filePath" : "studenti.gspec",
+              "lineNumber" : 30
+            },
+            "objects" : [ {
+              "name" : "naziv",
+              "specs" : [ {
+                "status" : "error",
+                "place" : {
+                  "filePath" : "studenti.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "inside header 24px right",
+                "errors" : [ "\"naziv\" is absent on page" ],
+                "highlight" : [ ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "side" : {
+              "area" : [ 0, 88, 354, 580 ]
+            },
+            "footer" : {
+              "area" : [ 0, 669, 1012, 137 ]
+            },
+            "glavni" : {
+              "area" : [ 354, 88, 657, 580 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1012, 88 ]
+            },
+            "logo" : {
+              "area" : [ 0, 10, 30, 30 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541265707831,
+        "type" : "node"
+      } ],
+      "time" : 1541265692306,
+      "type" : "node"
+    } ]
+  }
+}

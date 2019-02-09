@@ -1,0 +1,194 @@
+{
+  "testId" : "1-addzadatak.gspec",
+  "name" : "addZadatak.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  addZadatak.gspec --url http://localhost/addZadatak.html --size 1368x766 --htmlreport addZadatak(1368x766)",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: addZadatak.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541190661361,
+          "sections" : [ {
+            "name" : "footer",
+            "place" : {
+              "filePath" : "addZadatak.gspec",
+              "lineNumber" : 9
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 11
+                },
+                "name" : "aligned horizontally bottom footer",
+                "highlight" : [ "footer", "footer" ]
+              } ]
+            } ]
+          }, {
+            "name" : "header",
+            "place" : {
+              "filePath" : "addZadatak.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "aligned horizontally top header",
+                "highlight" : [ "header", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "logo",
+            "place" : {
+              "filePath" : "addZadatak.gspec",
+              "lineNumber" : 17
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "aligned vertically left logo",
+                "highlight" : [ "logo", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "aligned vertically right logo",
+                "highlight" : [ "logo", "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "naziv",
+            "place" : {
+              "filePath" : "addZadatak.gspec",
+              "lineNumber" : 22
+            },
+            "objects" : [ {
+              "name" : "naziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "inside header",
+                "highlight" : [ "naziv", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "glavniSadrzaj",
+            "place" : {
+              "filePath" : "addZadatak.gspec",
+              "lineNumber" : 26
+            },
+            "objects" : [ {
+              "name" : "glavni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "width ~ 85% of screen/width",
+                "highlight" : [ "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "below header",
+                "highlight" : [ "glavni", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "aligned horizontally all glavni",
+                "highlight" : [ "glavni", "glavni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "aligned vertically all glavni",
+                "highlight" : [ "glavni", "glavni" ]
+              } ]
+            } ]
+          }, {
+            "name" : "forma",
+            "place" : {
+              "filePath" : "addZadatak.gspec",
+              "lineNumber" : 33
+            },
+            "objects" : [ {
+              "name" : "forma",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "aligned horizontally all forma",
+                "highlight" : [ "forma", "forma" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addZadatak.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "inside glavni",
+                "highlight" : [ "forma", "glavni" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "footer" : {
+              "area" : [ 0, 648, 1356, 36 ]
+            },
+            "glavni" : {
+              "area" : [ 101, 83, 1152, 677 ]
+            },
+            "naziv" : {
+              "area" : [ 1010, 15, 252, 32 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1360, 83 ]
+            },
+            "logo" : {
+              "area" : [ 2, 2, 30, 30 ]
+            },
+            "forma" : {
+              "area" : [ 389, 192, 576, 341 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541190658661,
+        "type" : "node"
+      } ],
+      "time" : 1541190649144,
+      "type" : "node"
+    } ]
+  }
+}

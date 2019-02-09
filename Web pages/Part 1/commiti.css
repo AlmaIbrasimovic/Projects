@@ -1,0 +1,119 @@
+#logo {
+    width: 30px;
+    height: 30px;
+}
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body {
+    position:fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    background-color:rgb(230, 232, 237);
+    right: 0;
+    height:100%;
+    width:100%;
+}
+#header {
+    width: 100%;
+    height: 55px;
+    background-color: rgb(255,204,153); 
+    padding-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border: 2px solid darkblue;
+}
+
+#glavni {
+    margin-left:4%;
+    margin-top:4%; 
+    width: 100%;
+    line-height: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.naziv {
+    font-size:28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgb(160,82,45);
+    float: right;
+}
+
+/*-------------------------------------------*/
+            /*UREĐIVANJE TABELE*/
+table,th ,td{
+    border: 2px solid darkblue;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align:  center;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 45%;
+}
+td {
+    width: 5%;
+}
+table {
+    margin-top: 40px;
+    margin-left: 4%;  
+} 
+th {
+    background-color: rgb(196, 200, 209);
+    font-weight: 100;
+}
+/*-------------------------------------------*/
+
+#footer {
+    background-color: rgb(255,204,153); 
+    width: 100%;
+    font-size: 20px;
+    position:fixed;
+    bottom:0px;
+    height: 53px;
+    border-top: 2px solid darkblue;
+}
+
+#footer p {
+    text-align: center;
+    padding-top:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+}
+
+
+@media screen and (min-width: 600px) {
+    .naziv {
+        position:fixed;
+        bottom: 93%;
+        right: 93px; 
+    }
+    .lista {
+        list-style: none;
+        display:inline;
+        position: relative;
+        left: 10px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .naziv {
+        font-size:21px;
+        position: relative;
+        top:-13px;
+    }
+    .lista {
+        display:inline;
+        list-style: none;
+        position: relative;
+        left: 10px;
+        top:-17px;   
+    }
+    table {
+        width: 86%;
+    }
+}
+/*KRAJ*/
+/*------------------------------------------------*/

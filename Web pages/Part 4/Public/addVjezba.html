@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodavanje vježbe/spirale</title>
+        <link rel="stylesheet" href="addVjezba.css">
+        <script src="addVjezba.js"></script>
+        <script src="validacija.js"></script>
+        <script src ="citanjeIzBazeAjax.js"></script>
+        <script src="citanjeZadatakaBaza.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body onload="citanjeBaze()">
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href="studenti.html">Pregled studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="zadaci.html">Odabir vježbe</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="commiti.html">Pregled commita</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addZadatak.html">Dodavanje zadatka</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addVjezba.html">Dodavanje vježbe/spirale</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addStudent.html">Dodavanje studenata</a>&nbsp;&nbsp;</li>
+                <li class="lista"><a href="addGodina.html">Dodavanje godine</a></li>  
+            </ul>
+            <p class = "naziv">Dodavanje vježbe/spirale</p>
+        </div>
+        <div id = "glavniSadrzaj">
+            <div class="prva">
+                <form name ="fPostojeca" action ="http://localhost:8080/addVjezba" method="POST">
+                    <p class="glavna">Dodavanje postojeće vježbe/spirale</p>
+                    <p class ="sporedne">Godina</p>
+                    <select class = "godina" name = "sGodine" id = "godinaSel">
+                       
+                    </select>
+                    <p class ="sporedne">Vježba/Spirale</p>
+                    <select id = "vjezbe" name ="sVjezbe">
+                    </select>
+                  <br>
+                  <div id = "validatorA"></div>
+                 <input type = "submit" value = "Dodaj" onclick="return testPrvi()">
+                </form>
+            </div>
+            <div class = "druga">
+                <form name="fNova" id = "prva" action ="http://localhost:8080/addVjezba" method="POST">
+                    <p class="glavna">Nova vježba/spirala</p>
+                    <p class = "drugaSporedna">Naziv vježbe</p>
+                    <input type = "text" name="naziv" id = "prvi" required>
+                    <p class ="drugaSporedna">Godina</p>
+                    <select class = "godina" name ="sGodine" id = "godinaSelect">
+                    </select>
+                    <br><br>
+                    <div id = "validator"></div>
+                    <br><br>
+                    <input type ="checkbox" name = "spirala">   Spirala
+                    <input type ="submit" name ="dZadatak" id="dodaj" value = "Dodaj" onclick="return test()"> 
+                </form>
+            </div>
+            <div class = "nova">
+                <form name = "fPoveziZadatak" action ="/vjezba/:idVjezbe/zadatak" method="POST">
+                    <p class="sporedne">Vjezbe</p>
+                    <select name = "sVjezbe" onchange="funkcija()"></select> <br><br>
+                    <p class="sporedne">Zadatak</p>
+                    <select name = "sZadatak"></select><br><br>
+                    <input type="submit" name="dZadatak" onclick="promijeni()">
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+@objects 
+    logo #logo
+    header #header
+    footer #footer
+    naziv .naziv
+    side #side
+    glavni #glavniSadrzaj
+
+= side =
+    side: 
+        width ~ 35 % of screen/width
+
+= glavni =
+    glavni:
+        width ~ 65 % of screen/width
+
+= footer =
+    footer:
+        aligned horizontally bottom footer
+
+= header =
+    header:
+        aligned horizontally top header
+
+= logo =
+    logo:
+        aligned vertically left logo
+        aligned vertically right logo
+
+= naziv =
+    naziv:
+        inside header 24px right 
+

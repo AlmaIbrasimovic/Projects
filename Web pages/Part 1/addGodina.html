@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dodaj godinu</title>
+        <link rel="stylesheet" href="addGodina.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id = "header">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmse0yWk5VCW9_EWcR2FYSOsfRN4WvqogiDHH1sW4W3tABMlfHQ" id ="logo" alt ="Logo" >
+            <br><br>
+            <ul id = "meni">
+                <li class="lista"><a href = "zadaci.html">Pregled godina</a> &nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "addGodina.html">Dodavanje godine</a>&nbsp;&nbsp;&nbsp;</li>
+                <li class="lista"><a href = "studenti.html">Pregled studenata</a>&nbsp;</li>
+            </ul>
+            <p class = "naziv">Dodavanje godine</p>
+        </div>
+        <div id = "side">
+            <p id ="glavna">Unos godine:</p> <br>
+            <form>
+                <p class = "sporedne">Naziv godine</p> 
+                <input type ="text" name = "naziv" required>
+                <p class = "sporedne">Naziv repezitorija vježbe</p> 
+                <input type ="text" name ="rvjezbe" required><br>
+                <p class = "sporedne">Nazivi repezitorija spirale</p>
+                <input type ="text" name = "rspiral" required><br>
+                <input type ="reset" value="Poništi">
+                <input type = "submit" value ="Unesi">
+            </form>
+        </div>
+        <div id = "glavniSadrzaj">
+            <div class = "godina">
+                <p class = "naslov">2015/16</p><br>
+                <p><strong>Broj studenata:</strong> 90</p>
+                <p><strong>Broj vježbi:</strong> 10</p>
+                <p><strong>Broj spirala:</strong> 4</p>
+            </div>
+
+            <div class = "godina">
+                <p class = "naslov">2016/17</p><br>
+                <p><strong>Broj studenata:</strong> 90</p>
+                <p><strong>Broj vježbi:</strong> 10</p>
+                <p><strong>Broj spirala:</strong> 4</p>
+            </div>
+            <div class = "godina">
+            </div>
+            <div class = "godina">
+            </div>
+        </div> 
+        <div id="footer">
+            <p>Web tehnologije 2018/19</p>
+        </div>
+    </body>
+</html>
