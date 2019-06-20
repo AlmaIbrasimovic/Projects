@@ -1,0 +1,22 @@
+{
+    "ime": "Neko ime", 
+    "prezime": "Neko prezime", 
+    "spol": "zenski",  
+    "brIndeksa": "12345",  
+    "jmbg": "1234567890", 
+    "adresaUlica": "Addr1", 
+    "adresaMjesto": "Addr2",   
+    "kontaktTelefon": "123-456", 
+    "kontaktEmail": "ap@gmail.com", 
+    "imeOca": "aa", 
+    "prezimeOca": "bb",
+    "imeMajke": "cc",
+    "prezimeMajke": "dd",
+    "datumRod": "07.01.1998",
+    "mjestoRod": "mj1",
+    "opcinaRod": "or",
+    "drzavaRod": "BiH",
+    "nacionalnost": "b", 
+    "kanton": "Sarajevo",
+    "drzavljanstvo": "BiH"
+}

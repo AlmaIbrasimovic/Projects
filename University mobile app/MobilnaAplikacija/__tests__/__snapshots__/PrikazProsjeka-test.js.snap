@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prosjeci po semestrima 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 20,
+      "paddingTop": 15,
+    }
+  }
+>
+  <View
+    testID="godine"
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+       Prosjeci po godinama
+      
+
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "black",
+        "borderBottomWidth": 1,
+      }
+    }
+  />
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+       Prosjeci po godinama sortirani
+      
+
+       
+    </Text>
+  </View>
+  <View
+    testID="semestri"
+  >
+    <View
+      style={
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+        }
+      }
+    />
+    <View>
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+      >
+         Prosjeci po semestrima
+        
+
+      </Text>
+    </View>
+  </View>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "lightgrey",
+          "borderRadius": 10,
+          "justifyContent": "center",
+          "marginBottom": 20,
+          "marginLeft": "5%",
+          "marginRight": "5%",
+          "marginTop": 10,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+    >
+      <Text>
+        Prikaži semestre sortirano po prosjeku
+      </Text>
+    </View>
+  </View>
+</View>
+`;
