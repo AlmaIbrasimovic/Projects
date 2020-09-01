@@ -1,0 +1,115 @@
+#title {
+    text-align: center;
+    font-family: arial, sans-serif;
+  }
+  
+  #korisnici {
+    table-layout: fixed;
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 100%;
+  }
+  
+  #korisnici td, #korisnici th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #korisnici tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #korisnici tr:hover {background-color: #ddd;}
+  
+  #korisnici th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(76, 119, 175);
+    color: white;
+  }
+
+  .btnObrisiUgovor {
+      font-size: 21px;
+      padding: 5px 20px;
+      border: 0;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 2%;
+      float: right;
+      margin-right: 0.5%;
+      background-color: rgb(76, 119, 175);
+    }
+
+    .btnObrisiUgovor:hover {
+        color: white;
+        background-color: #155e8f;
+        border-radius: 10px; 
+    }
+
+    .btnDodajUgovor {
+        font-size: 21px;
+        padding: 5px 20px;
+        margin-top: 5%;
+        margin-bottom: 4%;
+        background-color: #3498db;
+        color: #fff; 
+        border-radius: 10px;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;      
+        background-color: rgb(76, 119, 175);
+    }
+
+    .btnDodajUgovor:hover {
+        color: white;
+        background-color: #155e8f;
+        border-radius: 10px; 
+    }
+
+  .formaUgovori {
+      background-color: #cbd0d696;
+      box-shadow: 0px 0px 18px #555;
+      border: 1px solid black;
+      border-radius: 8px;
+      position: absolute;
+      left: 30%;
+      margin:0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+    .form-grupaUgovori {
+      display: flex;
+
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      label {
+        font-size: 16px;
+      }
+      input {
+        margin-top: 6px;
+        min-width: 18em;
+        height: 25px;
+        padding: 0px 10px;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        background-color: #f3f3f3;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin-bottom:10px;
+        transition: all 250ms ease-in-out;
+        &:hover {
+          background-color: #ffffff;
+          box-shadow: 0px 0px 14px 0.3px #0e81ce96;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+        }
+      }
+    }
+  }
