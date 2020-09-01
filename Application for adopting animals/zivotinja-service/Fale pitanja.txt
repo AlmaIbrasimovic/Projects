@@ -1,0 +1,18 @@
+1) Navedite raspon frekvencija koje čuje normalno ljudsko uho (od 20Hz do 20kHz)
+2) Navedite koja dva tipa receptora se nalaze na mrežnici ljudskog oka, te ukratko obrazložite njihovu
+ulogu u ljudskom vidu
+3) Ukratko objasnite osnovnu razliku između linearnih i nelinearnih medija, te navedite po jedan
+primjer za oba tipa medija (linearni i nelinearni)
+4) Navedite tri kriterija na temelju kojih se neki sistem može klasificirati kao multimedijalni si
+5) Na primjeru proizvoljnog signala ukratko objasnite uzorkovanje signala.
+6) Skicirajte prenosne funkcije za visokopropusni filter i pojasno-propusni filter
+7) Šta je clipping?
+8) Pojasniti sta je echo?
+9) Razlika između multimedije i hipermedije?
+10) Skicirati model potpunog FIR sistema, jednačina s kojom je opisan i njegovu prenosnu funkciju 
+11) U kakvom su odnosu R,G,B kod sive?
+12) Objasniti pojam komplementarne boje i primjere
+13) KOje modele i dubine boja možemo predstaviti  BMP formatom datoteke?
+14) Objasniti razliku u načinu prikaza vremenski ovisnih i neovisnih medijskih objekata
+15) Nacrtati primjer sgnala i objasniti 3bit kvantizaciju
+16) Objasnite pojam multimedijalnog sistema

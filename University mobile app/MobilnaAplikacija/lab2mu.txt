@@ -1,0 +1,18 @@
+data(Carseats)
+set.seed(2)
+train <- sample(1:nrow(Carseats), 300)
+Carseats.train <- Carseats[-train, ]
+Carseats.test <-  Carseats[-train, ]
+tree.Carseats <- tree(Sales~ . , Carseats)
+tree.pred <- predict(tree.Carseats, Carseats.test)
+table(tree.pred, Carseats.test$Sales)
+
+//MSE
+cv.carseats <-  cv.tree(tree.carseats, FUN=prune.tree)
+par(mfrow=c(1, 2))
+plot(cv.carseats$size, cv.carseats$dev, type="b")
+plot(cv.carseats$k, cv.carseats$dev, type="b")
+pruned.carseats <- prune.tree(tree.carseats, best=9)
+par(mfrow=c(1, 1))
+plot(pruned.carseats)
+text(pruned.carseats, pretty=0, cex=0.5)
