@@ -3,13 +3,11 @@ package com.example.recipes.controller;
 import com.example.recipes.model.Recipe;
 import java.util.List;
 import com.example.recipes.service.RecipeService;
-import org.json.JSONObject;
+import net.minidev.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
 
 @RestController
 public class RecipeController {
@@ -71,4 +69,31 @@ public class RecipeController {
         }
     }
 
+    // POST
+    @PostMapping ("/recipe")
+    Recipe createRecipe (@Valid @RequestBody Recipe recipe) {
+        return recipeService.createRecipe(recipe);
+    }
+
+    // PUT
+    @PutMapping ("/recipe/{id}")
+    @ResponseBody
+    ResponseEntity<JSONObject> updateRecipe (@RequestBody Recipe recipe, @PathVariable Long id) throws Exception {
+        JSONObject temp = new JSONObject();
+        try {
+            recipeService.updateRecipe(recipe, id);
+            temp.put("message", "Recipe with id " + id + " was successfully updated!");
+            return new ResponseEntity<JSONObject>(
+                    temp,
+                    HttpStatus.OK
+            );
+        }
+        catch (Exception e) {
+            temp.put("message", e.getMessage());
+            return new ResponseEntity<JSONObject>(
+                    temp,
+                    HttpStatus.BAD_REQUEST
+            );
+        }
+    }
 }

@@ -10,5 +10,4 @@ public class RecipesApplication {
         System.out.print("Running");
         SpringApplication.run(RecipesApplication.class, args);
     }
-
 }
