@@ -1,4 +1,4 @@
 # Projects
 
-C++, C#,C, HTML, JS projects
+C++, C#,C, Spring Boot, React and React Native projects
 
