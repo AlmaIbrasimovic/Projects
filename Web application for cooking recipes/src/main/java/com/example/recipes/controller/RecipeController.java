@@ -61,7 +61,7 @@ public class RecipeController {
             );
         }
         catch (Exception e) {
-            temp.put("message", "Some error happened while deleting recipe with id " + id);
+            temp.put("message", e.getMessage());
             return new ResponseEntity<>(
                     temp,
                     HttpStatus.BAD_REQUEST
@@ -81,7 +81,7 @@ public class RecipeController {
     ResponseEntity<JSONObject> updateRecipe (@RequestBody Recipe recipe, @PathVariable Long id) throws Exception {
         JSONObject temp = new JSONObject();
         try {
-            recipeService.updateRecipe(recipe, id);
+            recipeService.updateRecipe(recipe , id);
             temp.put("message", "Recipe with id " + id + " was successfully updated!");
             return new ResponseEntity<JSONObject>(
                     temp,

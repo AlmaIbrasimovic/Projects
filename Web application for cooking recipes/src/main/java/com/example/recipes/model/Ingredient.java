@@ -1,36 +1,42 @@
 package com.example.recipes.model;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Ingredient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank (message = "Name of the ingredient is mandatory")
+    @NotBlank(message = "Name of the ingredient is mandatory")
     private String Name;
 
-    @NotBlank (message = "Quantity is mandatory!")
-    private String Quantity;
+    @NotNull(message = "Quantity is mandatory!")
+    private Integer Quantity;
 
-    // Recipes n-n
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
-    @JoinTable(name = "ingredients_recipes",
-            joinColumns = {
-                    @JoinColumn(name = "ingredientID", referencedColumnName = "id", nullable = false, updatable = false)},
-            inverseJoinColumns = {
-                    @JoinColumn(name = "recipeID", referencedColumnName = "id", nullable = false, updatable = false)})
-    private Set<Ingredient> Recipes = new HashSet<>();
+    @NotBlank(message = "Unit is mandatory!")
+    private String Unit;
+
+    @ManyToMany(mappedBy = "ingredients")
+    private Set<Recipe> recipes = new HashSet<>();
 
     // Constructors
-    public Ingredient() {}
-    public Ingredient (String n, String q) {
-        Name =  n;
+    public Ingredient() {
+    }
+
+    public Ingredient(String n, Integer q, String unit) {
+        Name = n;
         Quantity = q;
+        Unit = unit;
     }
 
     // Getters and setters
@@ -50,19 +56,27 @@ public class Ingredient {
         Name = name;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return Quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         Quantity = quantity;
     }
 
-    public Set<Ingredient> getRecipes() {
-        return Recipes;
+    public String getUnit() {
+        return Unit;
     }
 
-    public void setRecipes(Set<Ingredient> recipes) {
-        Recipes = recipes;
+    public void setUnit(String unit) {
+        Unit = unit;
+    }
+
+    public void setRecipes(Set<Recipe> recipes) {
+        this.recipes = recipes;
+    }
+
+    public Set<Recipe> getRecipes() {
+        return recipes;
     }
 }

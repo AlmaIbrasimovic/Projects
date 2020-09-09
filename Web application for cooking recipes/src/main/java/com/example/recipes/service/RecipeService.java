@@ -37,7 +37,7 @@ public class RecipeService {
         if (recipeRepository.count() == 0) {
             throw new Exception("There is no recipes to delete!");
         } else if (!recipeRepository.existsById(id)) {
-            throw new Exception("Recipe with id " + id + " doesn't exist!");
+            throw new RecipeException(id);
         } else {
             recipeRepository.deleteById(id);
         }
@@ -49,7 +49,7 @@ public class RecipeService {
 
     public Recipe updateRecipe(Recipe newRecipe, Long id) throws Exception {
         if (!recipeRepository.existsById(id)) {
-            throw new Exception("Recipe with id " + id + " doesn't exist!");
+            throw new RecipeException(id);
         }
         return recipeRepository.findById(id)
                 .map(recipe -> {

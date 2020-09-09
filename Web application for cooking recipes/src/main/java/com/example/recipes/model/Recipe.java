@@ -1,46 +1,59 @@
 package com.example.recipes.model;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Recipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank (message = "Name of the recipe is mandatory!")
+    @NotBlank(message = "Name of the recipe is mandatory!")
     private String Name;
 
-    @NotBlank (message = "Type is mandatory!")
+    @NotBlank(message = "Type of the recipe is mandatory!")
     private String Type;
 
-    // User 1-n
+    // User n-1
     @ManyToOne
     @JoinColumn(name = "userID", nullable = true)
     private Korisnici userID;
 
-    @ManyToOne
-    @JoinColumn(name = "favUserID", nullable = true)
-    private Korisnici favouriteUserID;
+    // Favourite recipes n-n
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            },
+            mappedBy = "favouriteRecipes")
+    private Set<Korisnici> users = new HashSet<>();
 
     // Ingredients n-n
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
-    @JoinTable(name = "ingredients_recipes",
-            joinColumns = {
-                    @JoinColumn(name = "recipeID", referencedColumnName = "id", nullable = false, updatable = false)},
-            inverseJoinColumns = {
-                    @JoinColumn(name = "ingredientID", referencedColumnName = "id", nullable = false, updatable = false)})
-    private Set<Ingredient> Ingredients = new HashSet<>();
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "recipe_ingredients",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
+    private Set<Ingredient> ingredients = new HashSet<>();
 
     // Constructors
     public Recipe() {
     }
-    public Recipe (String n, String t) {
+
+    public Recipe(String n, String t, Ingredient... ingredients) {
         Name = n;
         Type = t;
+        this.ingredients = Stream.of(ingredients).collect(Collectors.toSet());
+        this.ingredients.forEach(x -> x.getRecipes().add(this));
     }
 
     // Getters and setters
@@ -76,20 +89,20 @@ public class Recipe {
         this.userID = userID;
     }
 
-    public Korisnici getFavouriteUserID() {
-        return favouriteUserID;
-    }
-
-    public void setFavouriteUserID(Korisnici favouriteUserID) {
-        this.favouriteUserID = favouriteUserID;
-    }
-
     public Set<Ingredient> getIngredients() {
-        return Ingredients;
+        return ingredients;
     }
 
     public void setIngredients(Set<Ingredient> ingredients) {
-        Ingredients = ingredients;
+        this.ingredients = ingredients;
+    }
+
+    public Set<Korisnici> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<Korisnici> users) {
+        this.users = users;
     }
 }
 
