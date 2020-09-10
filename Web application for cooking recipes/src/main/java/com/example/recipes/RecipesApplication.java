@@ -34,8 +34,8 @@ public class RecipesApplication implements CommandLineRunner {
 
         Recipe rec = new Recipe("Pizza", "Main Dish", new Ingredient("Milk", 1000, "ml"), new Ingredient("Chocolate", 250, "gr"));
         Korisnici user = new Korisnici("Alma", "Ibrasimovic", "alma_96", "nema");
-        user.getFavouriteRecipes().add(rec);
-        rec.getUsers().add(user);
+        //user.getFavouriteRecipes().add(rec);
+        //rec.getUsers().add(user);
         rRepo.save(rec);
         kRepo.save(user);
     }

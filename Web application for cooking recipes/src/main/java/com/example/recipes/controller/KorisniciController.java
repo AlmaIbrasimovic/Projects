@@ -1,6 +1,8 @@
 package com.example.recipes.controller;
+
 import com.example.recipes.Exceptions.KorisniciException;
 import com.example.recipes.model.Korisnici;
+import com.example.recipes.model.Recipe;
 import com.example.recipes.service.KorisniciService;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
 import javax.validation.Valid;
 import java.util.List;
 
@@ -16,25 +19,31 @@ public class KorisniciController {
 
     @Autowired
     private KorisniciService korisniciService;
-    public KorisniciController (KorisniciService korisniciService) {
+
+    public KorisniciController(KorisniciService korisniciService) {
         this.korisniciService = korisniciService;
     }
 
     // GET
-    @GetMapping ("/users")
-    public List<Korisnici> getAllUsers () {
+    @GetMapping("/users")
+    public List<Korisnici> getAllUsers() {
         return korisniciService.getAll();
     }
 
 
-    @GetMapping ("/user/{id}")
-    public Korisnici one (@PathVariable Long id) throws KorisniciException {
+    @GetMapping("/user/{id}")
+    public Korisnici one(@PathVariable Long id) throws KorisniciException {
         return korisniciService.findOne(id);
     }
 
+    @GetMapping("/favouriteRecipes/{id}")
+    public List<Recipe> getFavouriteRecipes(@PathVariable Long id) throws KorisniciException {
+        return korisniciService.getFavouriteRecipes(id);
+    }
+
     // DELETE
-    @DeleteMapping ("/deleteUsers")
-    ResponseEntity<JSONObject> deleteAllUsers () throws Exception {
+    @DeleteMapping("/deleteUsers")
+    ResponseEntity<JSONObject> deleteAllUsers() throws Exception {
         JSONObject message = new JSONObject();
         try {
             korisniciService.deleteAllUsers();
@@ -43,8 +52,7 @@ public class KorisniciController {
                     message,
                     HttpStatus.OK
             );
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             message.put("message", e.getMessage());
             return new ResponseEntity<>(
                     message,
@@ -53,8 +61,8 @@ public class KorisniciController {
         }
     }
 
-    @DeleteMapping ("/deleteUser/{id}")
-    ResponseEntity<JSONObject> deleteById (@PathVariable Long id) throws Exception {
+    @DeleteMapping("/deleteUser/{id}")
+    ResponseEntity<JSONObject> deleteById(@PathVariable Long id) throws Exception {
         JSONObject message = new JSONObject();
         try {
             korisniciService.deleteById(id);
@@ -63,8 +71,7 @@ public class KorisniciController {
                     message,
                     HttpStatus.OK
             );
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             message.put("message", e.getMessage());
             return new ResponseEntity<>(
                     message,
@@ -74,24 +81,44 @@ public class KorisniciController {
     }
 
     // POST
-    @PostMapping (value = "/user", consumes = "application/json", produces = "application/json")
-    Korisnici createUser (@Valid @RequestBody Korisnici user) {
+    @PostMapping(value = "/user", consumes = "application/json", produces = "application/json")
+    Korisnici createUser(@Valid @RequestBody Korisnici user) {
         return korisniciService.createUser(user);
     }
 
     // PUT
-    @PutMapping ("/user/{id}")
-    ResponseEntity<JSONObject> updateUser (@Valid @RequestBody Korisnici user, @PathVariable Long id) throws Exception {
+    @PutMapping("/user/{id}")
+    ResponseEntity<JSONObject> updateUser(@Valid @RequestBody Korisnici user, @PathVariable Long id) throws Exception {
         JSONObject message = new JSONObject();
         try {
-            korisniciService.updateUser (user, id);
+            korisniciService.updateUser(user, id);
             message.put("message", "User with id " + id + " was successfully updated!");
             return new ResponseEntity<>(
                     message,
                     HttpStatus.OK
             );
+        } catch (Exception e) {
+            message.put("message", e.getMessage());
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.BAD_REQUEST
+            );
         }
-        catch (Exception e) {
+    }
+
+    // Add favourite recipe to user
+    @PutMapping("/favouriteRecipe/{userID}/{recipeID}")
+    ResponseEntity<JSONObject> createFavouriteRecipe(@PathVariable Long userID, @PathVariable Long recipeID) throws Exception {
+
+        JSONObject message = new JSONObject();
+        try {
+            korisniciService.createFavouriteRecipe(userID, recipeID);
+            message.put("message", "Recipe with id " + recipeID + " assigned to user with id " + userID);
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.OK
+            );
+        } catch (Exception e) {
             message.put("message", e.getMessage());
             return new ResponseEntity<>(
                     message,
