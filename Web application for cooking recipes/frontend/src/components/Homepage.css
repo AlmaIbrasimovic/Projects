@@ -1,7 +1,6 @@
-.home-page-container {
+.homepage-container {
     background: url('../assets/img/HeaderPic.jpg') center center/cover no-repeat;
-
-    height: 100vh;
+    height: 89.5vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,7 +9,29 @@
     object-fit: contain;
 }
 
-.drawers {
-    width: 180;
-    background-color: red;
+
+.homepage-container > h2 {
+    color: white;
+    margin-bottom: -6%;
+    margin-top: 8%;
+    margin-left: 39%;
+    font-size: 150px;
+    font-family: "Tangerine", serif;
 }
+
+.homepage-container > h1 {
+    color: white;
+    margin-left: 39%;
+    font-size: 140px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+@media screen and (max-width: 960px) {
+    .homepage-container > h1 {
+      font-size: 80px;
+    }
+    .homepage-container >h2 {
+        font-size: 80px;
+        margin-top: 18%;
+    }
+  }

@@ -6,7 +6,10 @@ import Tab from '@material-ui/core/Tab';
 import PhoneIcon from '@material-ui/icons/Phone';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Homepage from "./components/Homepage"
+import Navbar from "./components/Navbar"
+import Home from './components/pages/Home';
 
 const useStyles = makeStyles({
   root: {
@@ -20,10 +23,19 @@ const useStyles = makeStyles({
 class App extends Component {
   render() {
     return (
-      <div>
+      <>
+      <Router>
+      <Navbar/>
+      <Switch>
+      <Route path='/' exact component={Home} />
+      </Switch>
+      </Router>
+      </>
+      /*<div>
+        <Navbar/>
         <Homepage />
         
-      </div>
+      </div>*/
     );
   }
 }
