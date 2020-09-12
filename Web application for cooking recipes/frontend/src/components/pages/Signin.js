@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import axios from 'axios'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,17 +14,20 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
-import SigninPIC from '../assets/img/signIN1.jpg';
+import SigninPIC from '../../assets/img/signIN1.jpg';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import EmailIcon from '@material-ui/icons/Email';
 import PasswordIcon from '@material-ui/icons/VpnKey';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import {spacing} from '@material-ui/system';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+import Test from '../../components/pages/Test'
 
+
+toast.configure()
 const useStyles = (theme) => ({
     root: {
-        height: '89.5vh',
-  
- 
+        height: '89.5vh'
     },
     image: {
         backgroundImage: `url(${SigninPIC})`,
@@ -41,7 +45,7 @@ const useStyles = (theme) => ({
     avatar: {
         margin: theme.spacing(1),
         backgroundColor: theme.palette.primary.dark,
-       
+
     },
     form: {
         width: '100%',
@@ -50,27 +54,46 @@ const useStyles = (theme) => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
         borderColor: theme.palette.primary.dark,
-        
-    },
-    input :{
-      
-    },
 
+    }
 });
 
-export class Signup extends Component {
+export class Signin extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          password: '',
-          showPassword: false,
+            email: '',
+            password: false,
         }
     }
 
     handleSubmit = () => {
-        console.log("RADI")
+        axios.post('http://localhost:8080/login', {
+            email: this.state.email,
+            password: this.state.password,
+
+        }).then(response => {
+            if (response.status === 200 || response.status === 201) toast.success(response.data.message.toString(), {position: toast.POSITION.TOP_RIGHT})
+            var userId = '';
+            axios.get(`http://localhost:8080/user/${this.state.email}/${this.state.password}`)
+                .then(res => {
+                    console.log(res.data)
+                    userId = res.data;
+                    this.props.history.push({
+                        pathname: '/user-profile',
+                        state: {id: res.data}
+                    })
+                })
+        }).catch(err => {
+            toast.error(err.response.data.message, {position: toast.POSITION.TOP_RIGHT})
+        })
     }
-   
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
 
     render() {
         const {classes} = this.props;
@@ -79,66 +102,31 @@ export class Signup extends Component {
             <Grid container component="main" className={classes.root}>
                 <CssBaseline/>
                 <Grid item xs={false} sm={4} md={7} className={classes.image}/>
-                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6}square>
+                <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                     <div className={classes.paper}>
                         <Avatar className={classes.avatar}>
                             <LockOutlinedIcon/>
                         </Avatar>
                         <Typography component="h1" variant="h5">
-                            Sign up
+                            Sign in
                         </Typography>
-                        <form className={classes.form} onSubmit={this.handleSubmit}>
-                        <TextField
-                                variant="standard"
-                                margin ='normal'
-                                required
-                                fullWidth
-                                id="firstName"
-                                label="First name"
-                                name="firstName"
-                                autoFocus
-                                className = {classes.input}
-                                InputProps={{
-                                  startAdornment: (
-                                    <InputAdornment position="start">
-                                      <AccountBoxIcon />
-                                    </InputAdornment>
-                                  ),
-                                }}
-                            />
+                        <form className={classes.form}>
                             <TextField
                                 variant="standard"
-                                margin ='normal'
-                                required
-                                fullWidth
-                                id="lastName"
-                                label="Last name"
-                                name="lastName"
-                                autoFocus
-                                className = {classes.input}
-                                InputProps={{
-                                  startAdornment: (
-                                    <InputAdornment position="start">
-                                      <AccountBoxIcon />
-                                    </InputAdornment>
-                                  ),
-                                }}
-                            />
-                            <TextField
-                                variant="standard"
-                                margin ='normal'
+                                margin='normal'
                                 required
                                 fullWidth
                                 id="email"
                                 label="Email"
                                 name="email"
-                                className = {classes.input}
+                                value={this.state.email}
+                                onChange={e => this.handleChange(e)}
                                 InputProps={{
-                                  startAdornment: (
-                                    <InputAdornment position="start">
-                                      <EmailIcon />
-                                    </InputAdornment>
-                                  ),
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <EmailIcon/>
+                                        </InputAdornment>
+                                    ),
                                 }}
                             />
                             <TextField
@@ -150,28 +138,29 @@ export class Signup extends Component {
                                 label="Password"
                                 type="password"
                                 id="password"
+                                value={this.state.password}
+                                onChange={e => this.handleChange(e)}
                                 InputProps={{
-                                  startAdornment: (
-                                    <InputAdornment position="start">
-                                      <PasswordIcon />
-                                    </InputAdornment>
-                                  ),
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <PasswordIcon/>
+                                        </InputAdornment>
+                                    ),
                                 }}
                             />
                             <Button
-                                type="submit"
                                 fullWidth
                                 variant="outlined"
                                 color="primary"
                                 className={classes.submit}
-                                //onClick = {this.handleSubmit}
+                                onClick={this.handleSubmit}
                             >
                                 Sign In
                             </Button>
                             <Grid container>
                                 <Grid item>
-                                    <Link href="/sign-in" variant="body2">
-                                        {"Already have an account? Sign In"}
+                                    <Link href="/sign-up" variant="body2">
+                                        {"Don't have an account? Sign Up"}
                                     </Link>
                                 </Grid>
                             </Grid>
@@ -183,4 +172,4 @@ export class Signup extends Component {
     }
 }
 
-export default withStyles(useStyles)(Signup);
+export default withStyles(useStyles)(Signin);
