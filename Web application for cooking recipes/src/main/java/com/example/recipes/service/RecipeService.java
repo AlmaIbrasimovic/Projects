@@ -55,6 +55,8 @@ public class RecipeService {
                 .map(recipe -> {
                     recipe.setType(newRecipe.getType());
                     recipe.setName(newRecipe.getName());
+                    recipe.setIngredients(newRecipe.getIngredients());
+                    recipe.setDescription(newRecipe.getDescription());
                     return recipeRepository.save(recipe);
                 })
                 .orElseGet(() -> {

@@ -24,6 +24,10 @@ public class Recipe {
     @NotBlank(message = "Type of the recipe is mandatory!")
     private String Type;
 
+    @Column(length=10485760)
+    @NotBlank(message = "Description of the recipe is mandatory!")
+    private String Description;
+
     // User n-1
     @ManyToOne
     @JoinColumn(name = "userID", nullable = true)
@@ -49,9 +53,10 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String n, String t, Ingredient... ingredients) {
+    public Recipe(String n, String t, String description, Ingredient... ingredients) {
         Name = n;
         Type = t;
+        Description = description;
         this.ingredients = Stream.of(ingredients).collect(Collectors.toSet());
         this.ingredients.forEach(x -> x.getRecipes().add(this));
     }
@@ -103,6 +108,14 @@ public class Recipe {
 
     public void setUsers(Set<Korisnici> users) {
         this.users = users;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
     }
 }
 

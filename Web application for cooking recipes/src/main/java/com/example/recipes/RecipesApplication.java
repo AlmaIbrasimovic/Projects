@@ -32,8 +32,8 @@ public class RecipesApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        Recipe rec = new Recipe("Pizza", "Main Dish", new Ingredient("Milk", 1000, "ml"), new Ingredient("Chocolate", 250, "gr"));
-        Korisnici user = new Korisnici("Alma", "Ibrasimovic", "alma_96", "nema");
+        Recipe rec = new Recipe("Pizza", "Main Dish", "Put milk and chocolate", new Ingredient("Milk", 1000, "ml"), new Ingredient("Chocolate", 250, "gr"));
+        Korisnici user = new Korisnici("Alma", "Ibrasimovic", "alma_96", "belma.alma@hotmail.com");
         //user.getFavouriteRecipes().add(rec);
         //rec.getUsers().add(user);
         rRepo.save(rec);

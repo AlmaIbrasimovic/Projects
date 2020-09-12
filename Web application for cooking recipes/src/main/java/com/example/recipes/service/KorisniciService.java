@@ -58,7 +58,7 @@ public class KorisniciService {
                     user.setFirstName(newUser.getFirstName());
                     user.setLastName(newUser.getLastName());
                     user.setPassword(newUser.getPassword());
-                    user.setUsername(newUser.getUsername());
+                    user.setEMail(newUser.getEMail());
                     return korisniciRepository.save(user);
                 })
                 .orElseGet(() -> {

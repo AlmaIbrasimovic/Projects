@@ -18,11 +18,11 @@ public class Korisnici {
     @NotBlank(message = "Last name is mandatory!")
     private String lastName;
 
-    @NotBlank(message = "Username is mandatory!")
-    private String username;
-
     @NotBlank(message = "Password is mandatory!")
     private String Password;
+
+    @NotBlank(message = "Email is mandatory!")
+    private String eMail;
 
     // Recipe 1-n
     @OneToMany(mappedBy = "userID")
@@ -44,11 +44,11 @@ public class Korisnici {
     public Korisnici() {
     }
 
-    public Korisnici(String fName, String lName, String userN, String pass) {
+    public Korisnici(String fName, String lName, String pass, String email) {
         firstName = fName;
         lastName = lName;
-        username = userN;
         Password = pass;
+        eMail = email;
     }
 
     // Getters and setters
@@ -76,14 +76,6 @@ public class Korisnici {
         this.lastName = lastName;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getPassword() {
         return Password;
     }
@@ -106,6 +98,14 @@ public class Korisnici {
 
     public void setFavouriteRecipes(Set<Recipe> favouriteRecipes) {
         this.favouriteRecipes = favouriteRecipes;
+    }
+
+    public String getEMail() {
+        return eMail;
+    }
+
+    public void setEMail(String eMail) {
+        this.eMail = eMail;
     }
 }
 
