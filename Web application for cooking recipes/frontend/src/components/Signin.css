@@ -1,0 +1,38 @@
+.sign-in-container {
+    height: 89.5vh;
+    width: 100%;
+    background: url('../assets/img/signIN1.jpg') center center/cover no-repeat;
+}
+
+.sign-in-form {
+    position: relative;
+    float: right;
+    background-color: white;
+    flex-flow: column;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+.sign-in-form button {
+
+    border: 1px solid black;
+    width: 50%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.sign-in-textfield {
+    padding: 10px 10px;
+    width: 550px;
+    border-radius: 5px;
+    outline: medium;
+    border: 1px solid #cfcfcf;
+}
+
