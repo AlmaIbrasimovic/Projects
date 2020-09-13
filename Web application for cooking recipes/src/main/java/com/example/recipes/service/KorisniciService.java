@@ -4,19 +4,21 @@ import com.example.recipes.Exceptions.KorisniciException;
 import com.example.recipes.Exceptions.RecipeException;
 import com.example.recipes.model.Korisnici;
 import com.example.recipes.model.Recipe;
+import com.example.recipes.model.ResponseMessageDTO;
+import com.example.recipes.model.UserLoginDTO;
 import com.example.recipes.repository.KorisniciRepository;
 import com.example.recipes.repository.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class KorisniciService {
+
+   // private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
     @Autowired
     private KorisniciRepository korisniciRepository;
 
@@ -27,6 +29,11 @@ public class KorisniciService {
         this.korisniciRepository = korisniciRepository;
         this.recipeRepository = recipeRepository;
     }
+
+    /*private boolean matchPasswords(String plainText, String hashPassword) {
+        return passwordEncoder.matches(plainText, hashPassword);
+    }*/
+
 
     public List<Korisnici> getAll() {
         return korisniciRepository.findAll();
@@ -89,5 +96,19 @@ public class KorisniciService {
         }
 
         return favRecipes;
+    }
+
+    public HashMap<String, String> login(UserLoginDTO user) throws Exception {
+        Korisnici userWithEmail = korisniciRepository.findByeMail(user.getEmail());
+        if (userWithEmail == null) {
+            throw new Exception("Incorrect email");
+        } else if (!user.getPassword().equals(userWithEmail.getPassword())) {
+            throw new Exception("Incorrect password!");
+        }
+        return new ResponseMessageDTO("Login successful!").getHashMap();
+    }
+
+    public Long getId (String email, String password) {
+        return korisniciRepository.getId (email, password);
     }
 }

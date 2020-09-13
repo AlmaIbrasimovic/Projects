@@ -3,6 +3,7 @@ package com.example.recipes.controller;
 import com.example.recipes.Exceptions.KorisniciException;
 import com.example.recipes.model.Korisnici;
 import com.example.recipes.model.Recipe;
+import com.example.recipes.model.UserLoginDTO;
 import com.example.recipes.service.KorisniciService;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -39,6 +41,11 @@ public class KorisniciController {
     @GetMapping("/favouriteRecipes/{id}")
     public List<Recipe> getFavouriteRecipes(@PathVariable Long id) throws KorisniciException {
         return korisniciService.getFavouriteRecipes(id);
+    }
+
+    @GetMapping("/user/{email}/{password}")
+    public Long getId(@PathVariable String email, @PathVariable String password) {
+        return korisniciService.getId(email, password);
     }
 
     // DELETE
@@ -84,6 +91,11 @@ public class KorisniciController {
     @PostMapping(value = "/user", consumes = "application/json", produces = "application/json")
     Korisnici createUser(@Valid @RequestBody Korisnici user) {
         return korisniciService.createUser(user);
+    }
+
+    @PostMapping("/login")
+    HashMap<String, String> login(@RequestBody UserLoginDTO user) throws Exception {
+        return korisniciService.login(user);
     }
 
     // PUT
