@@ -44,8 +44,9 @@ public class KorisniciController {
     }
 
     @GetMapping("/user/{email}/{password}")
-    public Long getId(@PathVariable String email, @PathVariable String password) {
-        return korisniciService.getId(email, password);
+    public Korisnici getData(@PathVariable String email, @PathVariable String password) {
+        Long id = korisniciService.getId(email, password);
+        return korisniciService.findOne(id);
     }
 
     // DELETE
