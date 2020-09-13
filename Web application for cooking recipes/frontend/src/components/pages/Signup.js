@@ -180,7 +180,6 @@ export class Signup extends Component {
                                 }}
                             />
                             <Button
-
                                 fullWidth
                                 variant="outlined"
                                 color="primary"

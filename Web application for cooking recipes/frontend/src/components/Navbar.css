@@ -21,13 +21,12 @@
 .navbar-logo {
     color: #fff;
     justify-self: start;
-
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
-
+    transform: translate(-15%, 8%);
 }
 
 .fa-typo3 {
@@ -61,7 +60,6 @@
 
 .nav-links:hover {
     color: red;
-
     transition: all 0.2s ease-out;
 }
 
@@ -119,6 +117,7 @@
 
     .navbar-logo {
         position: absolute;
+
         top: 0;
         left: 0;
         transform: translate(25%, 50%);

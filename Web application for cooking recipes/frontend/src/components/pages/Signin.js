@@ -9,7 +9,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import {withStyles} from '@material-ui/core';
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -74,14 +73,15 @@ export class Signin extends Component {
 
         }).then(response => {
             if (response.status === 200 || response.status === 201) toast.success(response.data.message.toString(), {position: toast.POSITION.TOP_RIGHT})
-            var userId = '';
             axios.get(`http://localhost:8080/user/${this.state.email}/${this.state.password}`)
                 .then(res => {
-                    console.log(res.data)
-                    userId = res.data;
                     this.props.history.push({
                         pathname: '/user-profile',
-                        state: {id: res.data}
+                        state: {
+                            id: res.data.id,
+                            firstName: res.data.firstName,
+                            lastName: res.data.lastName
+                        }
                     })
                 })
         }).catch(err => {
