@@ -54,7 +54,8 @@ public class KorisniciService {
         else korisniciRepository.deleteById(id);
     }
 
-    public Korisnici createUser(Korisnici newUser) {
+    public Korisnici createUser(Korisnici newUser) throws Exception{
+        if (korisniciRepository.existsByeMail(newUser.getEMail())) throw new Exception("Email already taken!");
         return korisniciRepository.save(newUser);
     }
 

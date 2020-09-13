@@ -21,6 +21,7 @@ public class Korisnici {
     @NotBlank(message = "Password is mandatory!")
     private String Password;
 
+    @Column(unique = true)
     @NotBlank(message = "Email is mandatory!")
     private String eMail;
 

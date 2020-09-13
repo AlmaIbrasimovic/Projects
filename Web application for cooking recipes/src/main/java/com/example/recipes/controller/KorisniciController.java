@@ -89,8 +89,22 @@ public class KorisniciController {
 
     // POST
     @PostMapping(value = "/user", consumes = "application/json", produces = "application/json")
-    Korisnici createUser(@Valid @RequestBody Korisnici user) {
-        return korisniciService.createUser(user);
+    ResponseEntity<JSONObject> createUser(@Valid @RequestBody Korisnici user) throws Exception {
+        JSONObject message = new JSONObject();
+        try {
+            korisniciService.createUser(user);
+            message.put("message", user);
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.OK
+            );
+        } catch (Exception e) {
+            message.put("message", e.getMessage());
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.BAD_REQUEST
+            );
+        }
     }
 
     @PostMapping("/login")

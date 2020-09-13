@@ -75,7 +75,7 @@ export class Signup extends Component {
         }).then(response => {
             if (response.status === 200 || response.status === 201) toast.success('Your account is successfully created!', {position: toast.POSITION.TOP_RIGHT})
         }).catch(err => {
-            toast.error(err.response.data.errors.toString(), {position: toast.POSITION.TOP_RIGHT})
+            toast.error(err.response.data.message.toString(), {position: toast.POSITION.TOP_RIGHT})
         })
     }
 

@@ -11,6 +11,8 @@ import java.util.List;
 @Repository
 public interface KorisniciRepository extends JpaRepository<Korisnici, Long> {
 
+    Boolean existsByeMail(String e_mail);
+
     @Query(value = "SELECT * FROM Korisnici WHERE e_mail = :e_mail", nativeQuery = true)
     Korisnici findByeMail(@Param("e_mail") String e_mail);
 
