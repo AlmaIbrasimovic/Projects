@@ -75,6 +75,14 @@
     display: none;
 }
 
+i {
+    
+    /* Adjust these values accordingly */
+    
+    margin-right: 12px;
+    /* Adjust these values accordingly */
+    
+}
 @media screen and (max-width: 960px) {
     .NavbarItems {
         position: relative;

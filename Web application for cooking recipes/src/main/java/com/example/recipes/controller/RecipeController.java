@@ -1,5 +1,6 @@
 package com.example.recipes.controller;
 
+import com.example.recipes.model.Korisnici;
 import com.example.recipes.model.Recipe;
 import java.util.List;
 import com.example.recipes.service.RecipeService;
@@ -70,9 +71,28 @@ public class RecipeController {
     }
 
     // POST
-    @PostMapping ("/recipe")
-    Recipe createRecipe (@Valid @RequestBody Recipe recipe) {
+   /* @PostMapping ("/recipe")
+    Recipe createRecipe (@Valid @RequestBody Recipe recipe) throws Exception{
         return recipeService.createRecipe(recipe);
+    }*/
+
+    @PostMapping(value = "/recipe", consumes = "application/json", produces = "application/json")
+    ResponseEntity<JSONObject> createRecipe(@Valid @RequestBody Recipe recipe) throws Exception {
+        JSONObject message = new JSONObject();
+        try {
+            recipeService.createRecipe(recipe);
+            message.put("message", recipe);
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.OK
+            );
+        } catch (Exception e) {
+            message.put("message", e.getMessage());
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.BAD_REQUEST
+            );
+        }
     }
 
     // PUT

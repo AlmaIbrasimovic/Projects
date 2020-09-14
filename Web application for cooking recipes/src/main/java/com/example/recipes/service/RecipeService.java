@@ -43,7 +43,7 @@ public class RecipeService {
         }
     }
 
-    public Recipe createRecipe(Recipe recipe) {
+    public Recipe createRecipe(Recipe recipe) throws Exception{
         return recipeRepository.save(recipe);
     }
 

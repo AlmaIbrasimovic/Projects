@@ -38,6 +38,7 @@ const useStyles = (theme) => ({
         height: 100,
         padding: '0 30px',
         width: 252,
+        labelPlacement: 'start',
         '&:hover': {
             backgroundColor: '#2e2b2b',
             borderColor: '#d9001d',
@@ -52,6 +53,7 @@ const useStyles = (theme) => ({
     label: {
         textTransform: 'capitalize',
         fontSize: 16,
+       
     },
 
 });
@@ -87,7 +89,7 @@ export class Dashboard extends Component {
                                 }}
                                 onClick={this.logout}
                                 size="inherit"
-                                endIcon={<AddBoxIcon/>}
+                                startIcon={<AddBoxIcon/>}
                             >
                                 Create new recipe
                             </Button>
@@ -99,7 +101,7 @@ export class Dashboard extends Component {
 
                             }}
                             size="inherit"
-                            endIcon={<FastfoodIcon/>}
+                            startIcon={<FastfoodIcon/>}
                         >
                             My recipes
                         </Button>
@@ -110,7 +112,7 @@ export class Dashboard extends Component {
 
                             }}
                             size="inherit"
-                            endIcon={<FavoriteIcon/>}
+                            startIcon={<FavoriteIcon/>}
                         >
                             Favourite recipes
                         </Button>
@@ -124,7 +126,7 @@ export class Dashboard extends Component {
                                 }}
                                 onClick={this.logout.bind(this)}
                                 size="inherit"
-                                endIcon={<ExitToAppIcon/>}
+                                startIcon={<ExitToAppIcon/>}
                             >
                                 Logout
                             </Button>
