@@ -10,6 +10,8 @@ import {borders} from '@material-ui/system';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+import IconButton from '@material-ui/core/IconButton';
 
 toast.configure()
 
@@ -26,8 +28,8 @@ const useStyles = (theme) => ({
 
     },
     IngredientTextField: {
-        width: '20%',
-        margin: theme.spacing(3, 2.5)
+        width: '28%',
+        margin: theme.spacing(1, 2.9)
 
     },
     button: {}
@@ -144,6 +146,7 @@ export class CreateRecipe extends Component {
                         onChange={e => this.handleChange(e)}
                     />
                     <div className="create-recipe-ingredients-container">
+                        <h2>Ingredients</h2>
                         {this.state.Ingredients.map((x, i) => {
                             return (
                                 <div className="box">
@@ -181,24 +184,16 @@ export class CreateRecipe extends Component {
                                         onChange={e => this.handleInputChange(e, i)}
                                     />
                                     <div className="btn-box">
-                                        {this.state.Ingredients.length !== 1 &&
-                                        <Button
-                                            className={clsx(classes.button)}
-                                            variant="contained"
-                                            color="primary"
-                                            startIcon={<DeleteIcon/>}
-                                            onClick={() => this.deteteRow(i)}
-                                        >Remove
-                                        </Button>}
                                         {this.state.Ingredients.length - 1 === i &&
-                                        <Button
-                                            variant="contained"
-                                            color="primary"
-                                            className={clsx(classes.button)}
-                                            startIcon={<AddIcon/>}
-                                            onClick={this.handleAddClick}
-                                        >Add
-                                        </Button>}
+                                        <IconButton
+                                            onClick={this.handleAddClick}>
+                                            <AddIcon/>                                           
+                                        </IconButton>}
+                                        {this.state.Ingredients.length !== 1 &&
+                                        <IconButton
+                                            onClick={() => this.deteteRow(i)}>
+                                            <RemoveIcon/>                                           
+                                        </IconButton>}
                                     </div>
                                 </div>
                             );

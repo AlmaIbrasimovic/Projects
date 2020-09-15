@@ -49,14 +49,15 @@ form {
    background-color: white;
    border: 1px black solid;
    border-radius: 5px;
-   margin-top:3% ;
+   margin-top:5% ;
    padding-top: 1%;
    margin-left: 3%;
+  
+}
 
-
- }
- .box{
+.box{
   margin-bottom: 10px;
+  padding-left: 4.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,4 +75,10 @@ form {
   margin-right: 10px;
 }
   
-
+h2 {
+  margin-top: -3px;
+  padding-bottom: 1.5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
