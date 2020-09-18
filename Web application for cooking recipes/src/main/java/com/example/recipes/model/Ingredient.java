@@ -21,7 +21,7 @@ public class Ingredient {
     private String Name;
 
     @NotNull(message = "Quantity is mandatory!")
-    private Integer Quantity;
+    private Double Quantity;
 
     @NotBlank(message = "Unit is mandatory!")
     private String Unit;
@@ -33,7 +33,7 @@ public class Ingredient {
     public Ingredient() {
     }
 
-    public Ingredient(String n, Integer q, String unit) {
+    public Ingredient(String n, Double q, String unit) {
         Name = n;
         Quantity = q;
         Unit = unit;
@@ -56,11 +56,11 @@ public class Ingredient {
         Name = name;
     }
 
-    public Integer getQuantity() {
+    public Double getQuantity() {
         return Quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(Double quantity) {
         Quantity = quantity;
     }
 

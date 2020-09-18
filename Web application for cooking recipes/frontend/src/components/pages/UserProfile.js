@@ -8,6 +8,7 @@ export default class UserProfile extends Component {
         return (
             <Dashboard
                 info = {this.props.location.state.firstName + " " + this.props.location.state.lastName}
+                id = {this.props.location.state.id}
             />
             
         );

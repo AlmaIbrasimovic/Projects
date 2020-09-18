@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.List;
 
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
@@ -24,7 +25,7 @@ public class Recipe {
     @NotBlank(message = "Type of the recipe is mandatory!")
     private String Type;
 
-    @Column(length=10485760)
+    @Column(length = 10485760)
     @NotBlank(message = "Description of the recipe is mandatory!")
     private String Description;
 
@@ -53,9 +54,10 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String n, String t, String description, Ingredient... ingredients) {
+    public Recipe(String n, String t, String description, Korisnici userID, Ingredient... ingredients) {
         Name = n;
         Type = t;
+        this.userID = userID;
         Description = description;
         this.ingredients = Stream.of(ingredients).collect(Collectors.toSet());
         this.ingredients.forEach(x -> x.getRecipes().add(this));
@@ -92,6 +94,7 @@ public class Recipe {
 
     public void setUserID(Korisnici userID) {
         this.userID = userID;
+        userID.getRecipes().add(this);
     }
 
     public Set<Ingredient> getIngredients() {
@@ -101,7 +104,12 @@ public class Recipe {
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
-
+/*
+    public void setIngredients(Ingredient... ingredients) {
+        this.ingredients = Stream.of(ingredients).collect(Collectors.toSet());
+        this.ingredients.forEach(x -> x.getRecipes().add(this));
+    }
+*/
     public Set<Korisnici> getUsers() {
         return users;
     }

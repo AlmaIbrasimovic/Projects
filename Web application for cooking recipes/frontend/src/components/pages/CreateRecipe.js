@@ -42,7 +42,6 @@ export class CreateRecipe extends Component {
             Ingredients: [
                 {Name: "", Quantity: "", Unit: ""}
             ],
-            name: '',
             type: '',
             description: '',
             Name: "",
@@ -78,16 +77,24 @@ export class CreateRecipe extends Component {
         // taskList1.splice(index, 1);
         // this.setState({ taskList: taskList1 });
     }
-
+   
     createRecipe = () => {
-        axios.post('http://localhost:8080/recipe', {
+        var headers = {
+            'Accept': 'application/json' 
+        }
+        const recipe = {
+            name: this.state.Name,
             type: this.state.type,
-            name: this.state.name,
             description: this.state.description
+        }
+        console.log(recipe)
+        axios.post(`http://localhost:8080/recipe/${this.props.id}`,{
+            ingredientList: this.state.Ingredients,
+            recipe: recipe
         }).then(response => {
             if (response.status === 200 || response.status === 201) toast.success("Recipe created successfully", {position: toast.POSITION.TOP_RIGHT})
         }).catch(err => {
-            console.log(this.state.Ingredients)
+            console.log(err.response)
             var error = '';
             for (var i = 0; i < err.response.data.errors.length; i++) {
                 error += err.response.data.errors[i] + "\n";
@@ -107,10 +114,10 @@ export class CreateRecipe extends Component {
                         margin='normal'
                         required
                         className={clsx(classes.textField)}
-                        id="name"
+                        id="Name"
                         label="Name"
-                        name="name"
-                        value={this.state.name}
+                        name="Name"
+                        value={this.state.Name}
                         onChange={e => this.handleChange(e)}
                     />
                     <TextField

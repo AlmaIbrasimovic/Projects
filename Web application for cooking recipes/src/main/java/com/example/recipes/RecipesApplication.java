@@ -11,9 +11,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @SpringBootApplication
 public class RecipesApplication implements CommandLineRunner {
-
 
     @Autowired
     private RecipeRepository rRepo;
@@ -31,12 +33,17 @@ public class RecipesApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-
-        Recipe rec = new Recipe("Pizza", "Main Dish", "Put milk and chocolate", new Ingredient("Milk", 1000, "ml"), new Ingredient("Chocolate", 250, "gr"));
         Korisnici user = new Korisnici("Alma", "Ibrasimovic", "alma_96", "belma.alma@hotmail.com");
+        kRepo.save(user);
+        Recipe rec = new Recipe("Pizza", "Main Dish", "Put milk and chocolate", user);
+        Set<Ingredient> ingredientSet = new HashSet<Ingredient>();
+        ingredientSet.add(new Ingredient("Milk", 1000.0, "ml"));
+        ingredientSet.add(new Ingredient("Chocolate", 250.0, "gr"));
+        rec.setIngredients(ingredientSet);
+        //  rec.setIngredients();
         //user.getFavouriteRecipes().add(rec);
         //rec.getUsers().add(user);
         rRepo.save(rec);
-        kRepo.save(user);
+
     }
 }

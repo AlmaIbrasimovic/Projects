@@ -1,7 +1,7 @@
 .dashboard-container {
-    height: 89.5vh;
     width: 100%;
     display: flex;
+    height: 89.5vh;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
 }
@@ -14,6 +14,8 @@
     height: 89.5vh;
     width: 17%;
     color: white;
+
+   
 }
 
 .dashboard-right-part {
@@ -38,14 +40,18 @@
 
 .dashboard-buttons-section {
    height: 50vh;
+
    padding-top: 35px;
    border-bottom: 0.2px solid rgb(87, 84, 84);
    background-color: rgb(28, 27, 27);;
 }
 
 .dashboard-logout-section {
-    padding-top: 105px;
+   padding-top: 105px;
     height: 31.5vh;
+
+   /* position: fixed;
+    height: 100vh;*/
     background-color: rgb(28, 27, 27);
 }
 
