@@ -17,7 +17,7 @@ import java.util.*;
 @Service
 public class KorisniciService {
 
-   // private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    // private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @Autowired
     private KorisniciRepository korisniciRepository;
@@ -54,7 +54,7 @@ public class KorisniciService {
         else korisniciRepository.deleteById(id);
     }
 
-    public Korisnici createUser(Korisnici newUser) throws Exception{
+    public Korisnici createUser(Korisnici newUser) throws Exception {
         if (korisniciRepository.existsByeMail(newUser.getEMail())) throw new Exception("Email already taken!");
         return korisniciRepository.save(newUser);
     }
@@ -109,7 +109,7 @@ public class KorisniciService {
         return new ResponseMessageDTO("Login successful!").getHashMap();
     }
 
-    public Long getId (String email, String password) {
-        return korisniciRepository.getId (email, password);
+    public Long getId(String email, String password) {
+        return korisniciRepository.getId(email, password);
     }
 }

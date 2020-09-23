@@ -90,4 +90,8 @@ public class RecipeService {
                     return recipeRepository.save(newRecipe);
                 });
     }
+
+    public List<Map<String,Object>> getUserRecipes(Long userID) throws Exception {
+        return recipeRepository.userRecipes(userID);
+    }
 }

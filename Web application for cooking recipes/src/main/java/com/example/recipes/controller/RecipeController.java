@@ -39,6 +39,12 @@ public class RecipeController {
         return recipeService.findById(id);
     }
 
+    // To get recipes that user created
+    @GetMapping ("/user/recipes/{userID}")
+    public List<Map<String,Object>> getUserRecipes (@PathVariable Long userID) throws Exception {
+        return recipeService.getUserRecipes (userID);
+    }
+
     // DELETE
     @DeleteMapping("/deleteRecipes")
     ResponseEntity<JSONObject> deleteAllRecipes() throws Exception {

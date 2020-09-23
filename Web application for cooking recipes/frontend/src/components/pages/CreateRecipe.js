@@ -73,9 +73,6 @@ export class CreateRecipe extends Component {
         this.setState({
             Ingredients: this.state.Ingredients.filter((s, sindex) => index !== sindex),
         });
-        // const taskList1 = [...this.state.taskList];
-        // taskList1.splice(index, 1);
-        // this.setState({ taskList: taskList1 });
     }
    
     createRecipe = () => {

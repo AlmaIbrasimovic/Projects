@@ -7,7 +7,7 @@ function RecipeItem(props) {
     return (
         <>
             <li className="recipes__item">
-                <Link className="recipes__item__link" to={props.path}>
+                <div className="recipes__item__link" >
                     <figure className="recipes__item__pic-wrap" data-category={props.label}>
                         <img
                             src={hamburger}
@@ -20,7 +20,7 @@ function RecipeItem(props) {
                             {props.text}
                         </h5>
                     </div>
-                </Link>
+                </div>
             </li>
         </>
     )

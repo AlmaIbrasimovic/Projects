@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Test from './Test'
 import Dashboard from '../Dashboard';
 import Navbar from '../Navbar'
-
+import {Link} from 'react-router-dom'
 export default class UserProfile extends Component {
     render() {
         return (

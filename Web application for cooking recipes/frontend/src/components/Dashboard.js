@@ -13,6 +13,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {hashHistory} from 'react-router';
 import {withRouter} from 'react-router-dom';
 import CreateRecipe from './pages/CreateRecipe';
+import MyRecipes from './pages/MyRecipes';
 import ReactDOM from 'react-dom';
 
 function Copyright() {
@@ -71,6 +72,10 @@ export class Dashboard extends Component {
         ReactDOM.render(<CreateRecipe id = {this.props.id}/>, document.getElementById("right-part"));
     }
 
+    showMyRecipes = () => {
+        ReactDOM.render(<MyRecipes id = {this.props.id}/>, document.getElementById("right-part"));
+    }
+
     render() {
         const {classes} = this.props;
         return (
@@ -101,6 +106,7 @@ export class Dashboard extends Component {
                                 label: classes.label,
 
                             }}
+                            onClick={this.showMyRecipes}
                             size="inherit"
                             startIcon={<FastfoodIcon/>}
                         >

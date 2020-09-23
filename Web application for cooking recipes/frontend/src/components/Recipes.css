@@ -23,6 +23,20 @@ h1 {
     margin: 50px 0 45px;
 }
 
+.recipes__wrapper__recipe {
+    float: left;
+    display: block;
+    margin: 50px 0 45px;
+    height: 25%;
+    width: 25%;
+}
+
+.recipes__container__recipe {
+    width: 100%;
+    margin-left: 25px;
+}
+
+
 .recipes__items {
     margin-bottom: 24px;
 }

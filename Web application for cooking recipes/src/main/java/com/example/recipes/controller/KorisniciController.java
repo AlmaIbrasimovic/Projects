@@ -49,6 +49,8 @@ public class KorisniciController {
         return korisniciService.findOne(id);
     }
 
+
+
     // DELETE
     @DeleteMapping("/deleteUsers")
     ResponseEntity<JSONObject> deleteAllUsers() throws Exception {
