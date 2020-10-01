@@ -79,19 +79,6 @@ h1 {
     animation-duration: 2s;
 }
 
-.recipes__item__pic-wrap::after {
-    content: attr(data-category);
-    position: absolute;
-    bottom: 0;
-    margin-left: 10px;
-    padding: 6px 8px;
-    max-width: calc((100%) - 60px);
-    font-size: 12px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #1f98f4;
-    box-sizing: border-box;
-}
 
 .recipes__item__img {
     position: absolute;
@@ -143,4 +130,43 @@ h1 {
     .recipes__item {
         margin-bottom: 2rem;
     }
+}
+
+.btnA {
+    position: absolute;
+    bottom: 0;
+    margin-left: 0px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #fff;
+    background-color: #1f98f4;
+    border-color: #1f98f4;
+}
+
+.modal {
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 85vh;
+    width: 50vw;
+    margin-top: 2.5%;
+    color: white;
+}
+
+.modal button {
+    float: right;
+    margin-top: 0.15%;
+    margin-right: 0.15%;
+    background-color: red;
+}
+
+.modal button:hover {
+    background-color: #911d1d;
 }

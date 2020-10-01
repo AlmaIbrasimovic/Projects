@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import {Link} from "react-router-dom"
+import {Link,  BrowserRouter} from "react-router-dom"
 import RecipeItem from '../RecipeItem'
 import '../Recipes.css'
 
@@ -18,29 +18,28 @@ class MyRecipes extends Component {
                 const Recipes = res.data;
                 this.setState({Recipes});
             })
-
     }
 
     render() {
         return (
+            <BrowserRouter>
             <div className="App">
                 <div className="my-recipes-wrapper">
                     {this.state.Recipes && this.state.Recipes.map((recipe, index) => {
                         return (
                             <div className="recipes__container__recipe" key={index}>
-                                <div className="recipes__wrapper__recipe">
-                                
+                                <div className="recipes__wrapper__recipe">                                
                                         <RecipeItem
                                             text={recipe.name}
-                                            label={recipe.name}                                    
-                                        />
-                                 
+                                            path='/'                                   
+                                        />                                
                                 </div>
                             </div>
                         );
                     })}
                 </div>
             </div>
+            </BrowserRouter>
         )
     }
 }

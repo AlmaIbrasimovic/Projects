@@ -16,6 +16,7 @@ import './App.css'
 import UserProfile from '././components/pages/UserProfile'
 import Test from '././components/pages/Test'
 import CreateRecipe from '././components/pages/CreateRecipe'
+
 function App() {
     return (
         <Router>
@@ -34,4 +35,3 @@ function App() {
 
 
 export default App;
-/*   <Route path='/user-profile' component={UserProfile}/>*/

@@ -81,8 +81,7 @@ export class Dashboard extends Component {
         return (
             <div className="dashboard-container">
                 <div className="dashboard-side-menu">
-                    <div className="dashboard-user-info">
-                       
+                    <div className="dashboard-user-info">                      
                         <text>{this.props.info}</text>
                     </div>
                     <div className="dashboard-buttons-section">
@@ -91,7 +90,6 @@ export class Dashboard extends Component {
                                 classes={{
                                     root: classes.root,
                                     label: classes.label,
-
                                 }}
                                 onClick={this.createRecipe}
                                 size="inherit"
@@ -104,7 +102,6 @@ export class Dashboard extends Component {
                             classes={{
                                 root: classes.root,
                                 label: classes.label,
-
                             }}
                             onClick={this.showMyRecipes}
                             size="inherit"
@@ -116,7 +113,6 @@ export class Dashboard extends Component {
                             classes={{
                                 root: classes.root,
                                 label: classes.label,
-
                             }}
                             size="inherit"
                             startIcon={<FavoriteIcon/>}
@@ -141,7 +137,6 @@ export class Dashboard extends Component {
                     </div>
                 </div>
                 <div className="dashboard-right-part" id="right-part">
-
                 </div>
             </div>
         );
