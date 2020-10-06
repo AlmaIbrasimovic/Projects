@@ -40,9 +40,14 @@ public class RecipeController {
     }
 
     // To get recipes that user created
-    @GetMapping ("/user/recipes/{userID}")
-    public List<Map<String,Object>> getUserRecipes (@PathVariable Long userID) throws Exception {
-        return recipeService.getUserRecipes (userID);
+    @GetMapping("/user/recipes/{userID}")
+    public List<Map<String, Object>> getUserRecipes(@PathVariable Long userID) throws Exception {
+        return recipeService.getUserRecipes(userID);
+    }
+
+    @GetMapping("/recipe/ingredients/{recipeID}")
+    public List<Map<String, Object>> getIngredients(@PathVariable Long recipeID) throws Exception {
+        return recipeService.getIngredients(recipeID);
     }
 
     // DELETE

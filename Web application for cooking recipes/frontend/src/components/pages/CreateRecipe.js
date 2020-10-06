@@ -84,7 +84,6 @@ export class CreateRecipe extends Component {
             type: this.state.type,
             description: this.state.description
         }
-    
         axios.post(`http://localhost:8080/recipe/${this.props.id}`,{
             ingredientList: this.state.Ingredients,
             recipe: recipe

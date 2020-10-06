@@ -157,13 +157,16 @@ h1 {
     height: 85vh;
     width: 50vw;
     margin-top: 2.5%;
-    color: white;
+    color: black;
+}
+
+.modal h3, h6 {
+    margin-left:1.5%
 }
 
 .modal button {
-    float: right;
     margin-top: 0.15%;
-    margin-right: 0.15%;
+    margin-left: 91%;
     background-color: red;
 }
 

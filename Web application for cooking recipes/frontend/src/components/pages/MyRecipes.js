@@ -8,16 +8,19 @@ class MyRecipes extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            Recipes: []
+            Recipes: [],
+            Ingredients: []
         }
     }
 
     componentWillMount() {
+
+        // To get recipes for user
         axios.get(`http://localhost:8080/user/recipes/${this.props.id}`)
             .then(res => {
                 const Recipes = res.data;
                 this.setState({Recipes});
-            })
+            })    
     }
 
     render() {
@@ -31,6 +34,8 @@ class MyRecipes extends Component {
                                 <div className="recipes__wrapper__recipe">                                
                                         <RecipeItem
                                             text={recipe.name}
+                                            recipeID = {recipe.id}
+                                            description = {recipe.description}
                                             path='/'                                   
                                         />                                
                                 </div>

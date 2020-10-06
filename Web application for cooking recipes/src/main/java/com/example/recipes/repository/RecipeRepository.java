@@ -17,5 +17,8 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     Recipe findOneById(@Param("id") Long id);
 
     @Query(value = "SELECT * FROM Recipe WHERE userID = :userID", nativeQuery = true)
-    List<Map<String,Object>> userRecipes(@Param("userID") Long userID);
+    List<Map<String, Object>> userRecipes(@Param("userID") Long userID);
+
+    @Query(value = "SELECT ingredient_id from recipe_ingredients where recipe_id = :recipe_id", nativeQuery = true)
+    List<Long> getIngredients(@Param("recipe_id") Long recipe_id);
 }

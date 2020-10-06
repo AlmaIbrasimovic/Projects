@@ -7,6 +7,7 @@ import com.example.recipes.model.Ingredient;
 import com.example.recipes.model.Korisnici;
 import com.example.recipes.model.Recipe;
 import com.example.recipes.model.RecipePostDTO;
+import com.example.recipes.repository.IngredientRepository;
 import com.example.recipes.repository.KorisniciRepository;
 import com.example.recipes.repository.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +17,13 @@ import org.springframework.stereotype.Service;
 public class RecipeService {
     @Autowired
     private RecipeRepository recipeRepository;
-
+    private IngredientRepository ingredientRepository;
     private KorisniciRepository korisniciRepository;
 
-    public RecipeService(RecipeRepository recRepo, KorisniciRepository korisniciRepository) {
+    public RecipeService(RecipeRepository recRepo, KorisniciRepository korisniciRepository, IngredientRepository ingredientRepository) {
         recipeRepository = recRepo;
         this.korisniciRepository = korisniciRepository;
+        this.ingredientRepository = ingredientRepository;
     }
 
     public List<Recipe> findAll() {
@@ -91,7 +93,17 @@ public class RecipeService {
                 });
     }
 
-    public List<Map<String,Object>> getUserRecipes(Long userID) throws Exception {
+    public List<Map<String, Object>> getUserRecipes(Long userID) throws Exception {
         return recipeRepository.userRecipes(userID);
+    }
+
+    public List<Map<String, Object>> getIngredients(Long recipeID) throws Exception {
+        List<Long> ingredientsID = recipeRepository.getIngredients(recipeID);
+        List<Map<String, Object>> ingredients = new ArrayList<>();
+        for (Long i : ingredientsID) {
+            ingredients.add(ingredientRepository.findOneById(i));
+
+        }
+        return ingredients;
     }
 }

@@ -8,6 +8,7 @@ import com.example.recipes.repository.IngredientRepository;
 import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -23,7 +24,7 @@ public class IngredientService {
         return ingredientRepository.findAll();
     }
 
-    public Ingredient findById (Long id) throws IngredientException {
+    public Ingredient findById(Long id) throws IngredientException {
         return ingredientRepository.findById(id).orElseThrow(() -> new IngredientException(id));
     }
 
@@ -32,7 +33,7 @@ public class IngredientService {
         ingredientRepository.deleteAll();
     }
 
-    public void deleteById (Long id) throws IngredientException {
+    public void deleteById(Long id) throws IngredientException {
         if (!ingredientRepository.existsById(id)) throw new IngredientException(id);
         ingredientRepository.deleteById(id);
     }
